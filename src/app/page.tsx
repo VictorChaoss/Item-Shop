@@ -17,7 +17,7 @@ const SECTION_KEYS = ['blue', 'red', 'green', 'purple', 'teal'];
 export default function Home() {
   const [bgColor, setBgColor] = useState(SECTION_COLORS.blue);
   const [activeSection, setActiveSection] = useState(0);
-  const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
