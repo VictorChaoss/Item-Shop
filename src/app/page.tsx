@@ -554,7 +554,7 @@ export default function Home() {
           paddingTop: '60px',
           paddingBottom: '80px',
         }}>
-          <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>SECTION 3</h2>
+          <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>THE SERIAL RUGGERS</h2>
 
           <div style={{ width: '100%', position: 'relative', marginBottom: '20px' }}>
             <div style={{
@@ -569,7 +569,7 @@ export default function Home() {
               <div style={{ position: 'absolute', bottom: '50px', right: '28px', width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '28px', fontWeight: 300, cursor: 'pointer', backdropFilter: 'blur(8px)', zIndex: 15 }}>+</div>
               <div style={{ position: 'absolute', bottom: '60px', left: '32px', zIndex: 10 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
-                <h3 style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>Bundle Name</h3>
+                <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>The Serial Rugger Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>2,800</span>
