@@ -70,7 +70,10 @@ body {
 
   /* Character container on mobile */
   .character-container {
-    display: none !important;
+    transform: scale(0.55) !important;
+    transform-origin: bottom right !important;
+    right: -10px !important;
+    bottom: 30px !important;
   }
 
   /* Section title smaller */
