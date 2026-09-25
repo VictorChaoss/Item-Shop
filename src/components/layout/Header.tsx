@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Search, Globe, ChevronDown, Download } from 'lucide-react';
+import { Search, Globe, ChevronDown, Download, Copy } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -97,10 +97,11 @@ export default function Header() {
       {/* RIGHT SIDE */}
       <div className="header-right-buttons" style={{ display: 'flex', alignItems: 'center', gap: '12px', height: '100%' }}>
         
-        {/* Search Bar */}
+        {/* CA Placeholder */}
         <div style={{
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'space-between',
           backgroundColor: '#1c1e22',
           height: '42px',
           borderRadius: '9999px',
@@ -108,21 +109,19 @@ export default function Header() {
           paddingRight: '16px',
           width: '280px',
           border: '1px solid rgba(255,255,255,0.06)',
+          cursor: 'pointer',
         }}>
-          <Search style={{ width: '18px', height: '18px', color: 'rgba(255,255,255,0.45)', marginRight: '12px', flexShrink: 0 }} />
-          <input 
-            type="text" 
-            placeholder="Search" 
-            style={{
-              backgroundColor: 'transparent',
-              border: 'none',
-              outline: 'none',
-              color: '#e0e0e0',
-              fontSize: '15px',
-              width: '100%',
-              fontFamily: 'inherit',
-            }}
-          />
+          <span style={{
+            color: 'rgba(255,255,255,0.7)',
+            fontSize: '14px',
+            fontFamily: 'monospace',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}>
+            CA: 0xPLACEHOLDER...
+          </span>
+          <Copy style={{ width: '16px', height: '16px', color: 'rgba(255,255,255,0.45)', flexShrink: 0, marginLeft: '8px' }} />
         </div>
         
         {/* Globe */}
