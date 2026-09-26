@@ -86,9 +86,27 @@ body {
     font-size: 24px !important;
   }
 
-  /* Header nav adjustments */
-  .header-right-buttons {
+  /* Header adjustments */
+  .header-nav {
     display: none !important;
+  }
+  
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  .header-right {
+    gap: 8px !important;
+  }
+  
+  .ca-placeholder {
+    width: 140px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+  
+  .ca-placeholder span {
+    font-size: 11px !important;
   }
 }
 
@@ -99,5 +117,9 @@ body {
   
   .bundle-title {
     font-size: 20px !important;
+  }
+  
+  .ca-placeholder {
+    width: 120px !important;
   }
 }

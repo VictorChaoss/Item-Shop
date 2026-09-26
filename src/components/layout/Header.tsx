@@ -72,7 +72,7 @@ export default function Header() {
         </div>
 
         {/* Nav Links */}
-        <nav style={{ display: 'flex', alignItems: 'center', marginLeft: '32px', gap: '6px', height: '100%' }}>
+        <nav className="header-nav" style={{ display: 'flex', alignItems: 'center', marginLeft: '32px', gap: '6px', height: '100%' }}>
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -95,10 +95,10 @@ export default function Header() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="header-right-buttons" style={{ display: 'flex', alignItems: 'center', gap: '12px', height: '100%' }}>
+      <div className="header-right" style={{ display: 'flex', alignItems: 'center', gap: '12px', height: '100%' }}>
         
         {/* CA Placeholder */}
-        <div style={{
+        <div className="ca-placeholder" style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
@@ -125,12 +125,12 @@ export default function Header() {
         </div>
         
         {/* Globe */}
-        <button style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <button className="mobile-hide" style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <Globe style={{ width: '22px', height: '22px', color: 'rgba(255,255,255,0.5)' }} />
         </button>
 
         {/* Sign In */}
-        <button style={{
+        <button className="mobile-hide" style={{
           height: '42px',
           paddingLeft: '22px',
           paddingRight: '22px',
@@ -147,7 +147,7 @@ export default function Header() {
         </button>
 
         {/* Buy V-Bucks */}
-        <button style={{
+        <button className="mobile-hide" style={{
           height: '42px',
           paddingLeft: '16px',
           paddingRight: '22px',
@@ -179,7 +179,7 @@ export default function Header() {
         </button>
 
         {/* Get Fortnite */}
-        <button style={{
+        <button className="mobile-hide" style={{
           height: '42px',
           paddingLeft: '22px',
           paddingRight: '16px',

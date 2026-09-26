@@ -161,7 +161,7 @@ export default function Home() {
             marginBottom: '20px',
           }}>
             {/* The card */}
-            <div style={{
+            <div className="hero-card" style={{
               width: '100%',
               height: '380px',
               borderRadius: '20px',
@@ -365,7 +365,7 @@ export default function Home() {
             marginBottom: '60px',
           }}>
             {/* The card */}
-            <div style={{
+            <div className="hero-card" style={{
               width: '100%',
               height: '380px',
               borderRadius: '20px',
@@ -557,7 +557,7 @@ export default function Home() {
           <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>THE SERIAL RUGGERS</h2>
 
           <div style={{ width: '100%', position: 'relative', marginBottom: '20px' }}>
-            <div style={{
+            <div className="hero-card" style={{
               width: '100%', height: '380px', borderRadius: '20px',
               background: 'linear-gradient(135deg, #34a85a 0%, #1e7a3a 50%, #105a22 100%)',
               position: 'relative', overflow: 'hidden',
@@ -699,7 +699,7 @@ export default function Home() {
           <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>THE EPSTEIN FILES</h2>
 
           <div style={{ width: '100%', position: 'relative', marginBottom: '20px' }}>
-            <div style={{
+            <div className="hero-card" style={{
               width: '100%', height: '380px', borderRadius: '20px',
               background: 'linear-gradient(135deg, #3a1870 0%, #2a1060 50%, #1a0c3a 100%)',
               position: 'relative', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)',
