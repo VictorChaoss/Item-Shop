@@ -283,11 +283,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/fried_chicken_koolaid.png" alt="Fried Chicken & Kool Aid" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '85%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/fried_chicken_koolaid.png" alt="Fried Chicken & Kool Aid" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Fried Chicken & Kool Aid</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -305,11 +301,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/fentanyl.png" alt="Fentanyl" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '85%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/fentanyl.png" alt="Fentanyl" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Fentanyl</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -327,11 +319,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/protest_pickaxe.png" alt="Protest Pickaxe" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '75%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/protest_pickaxe.png" alt="Protest Pickaxe" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Protest Pickaxe</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -482,11 +470,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/two_state_solution.jpg" alt="Two State Solution" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '75%', height: 'auto', objectFit: 'contain',
-                mixBlendMode: 'screen',
-              }} />
+              <img src="/images/two_state_solution.jpg" alt="Two State Solution" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Two State Solution</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -505,11 +489,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/talking_point.jpg" alt="The Talking Point" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -45%)',
-                width: '80%', height: 'auto', objectFit: 'contain',
-                mixBlendMode: 'screen',
-              }} />
+              <img src="/images/talking_point.jpg" alt="The Talking Point" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Talking Point</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -528,11 +508,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/ceasefire_report.jpg" alt="The Ceasefire Report" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '75%', height: 'auto', objectFit: 'contain',
-                mixBlendMode: 'screen',
-              }} />
+              <img src="/images/ceasefire_report.jpg" alt="The Ceasefire Report" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Ceasefire Report</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -629,11 +605,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/exit_liquidity.png" alt="Exit Liquidity" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '75%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/exit_liquidity.png" alt="Exit Liquidity" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Exit Liquidity</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -652,11 +624,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/blackbull_gta.png" alt="Black Bull GT" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '75%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/blackbull_gta.png" alt="Black Bull GT" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Black Bull GT</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -675,11 +643,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/10x_with_cheese.png" alt="10x With Cheese" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -55%)',
-                width: '75%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/10x_with_cheese.png" alt="10x With Cheese" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>10x With Cheese</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -760,11 +724,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/little_saint_james_map.png" alt="Map of Little Saint James" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -45%)',
-                width: '65%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/little_saint_james_map.png" alt="Map of Little Saint James" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Map of Little Saint James</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -783,11 +743,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/epstein_files_classified.jpg" alt="The Classified Files" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-                width: '80%', height: 'auto', objectFit: 'contain',
-                mixBlendMode: 'screen',
-              }} />
+              <img src="/images/epstein_files_classified.jpg" alt="The Classified Files" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Classified Files</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -806,11 +762,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/lolita_express.png" alt="Lolita Express" style={{
-                position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-                width: '80%', height: 'auto', objectFit: 'contain',
-                filter: 'drop-shadow(0 4px 15px rgba(0,0,0,0.3))',
-              }} />
+              <img src="/images/lolita_express.png" alt="Lolita Express" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Lolita Express</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -882,7 +834,7 @@ export default function Home() {
           <div className="item-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
             {/* Card 1 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/chrome_bag.png" alt="Chrome Bag" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', maxHeight: '60%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/chrome_bag.png" alt="Chrome Bag" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Chrome Bag</h3>
@@ -892,7 +844,7 @@ export default function Home() {
             
             {/* Card 2 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/vape_axe.png" alt="Vape Axe" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', maxHeight: '60%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/vape_axe.png" alt="Vape Axe" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Vape Axe</h3>
@@ -902,7 +854,7 @@ export default function Home() {
 
             {/* Card 3 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/curry_potion.png" alt="Curry Potion" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', maxHeight: '60%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/curry_potion.png" alt="Curry Potion" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Curry Potion</h3>
