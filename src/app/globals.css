@@ -39,8 +39,18 @@ body {
   text-transform: uppercase;
 }
 
+.mobile-menu-btn {
+  display: none !important;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* Hide sidebar dots on mobile */
   .sidebar-dots {
     display: none !important;

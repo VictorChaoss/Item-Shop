@@ -1,12 +1,13 @@
 'use client';
 
-import React from 'react';
-import { Search, Globe, ChevronDown, Download, Copy } from 'lucide-react';
+import React, { useState } from 'react';
+import { Search, Globe, ChevronDown, Download, Copy, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Header() {
   const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const navItems = [
     { label: 'Discover', href: '/' },
@@ -33,8 +34,17 @@ export default function Header() {
       {/* LEFT SIDE */}
       <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
         
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="mobile-menu-btn" 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', marginRight: '16px', padding: '0' }}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
         {/* Epic Games Shield Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
+        <div className="epic-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
           <div style={{
             width: '34px',
             height: '40px',
@@ -200,6 +210,44 @@ export default function Header() {
         </button>
         
       </div>
+      
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="mobile-menu-dropdown" style={{
+          position: 'absolute',
+          top: '64px',
+          left: 0,
+          width: '100%',
+          backgroundColor: '#101014',
+          borderBottom: '1px solid rgba(255,255,255,0.06)',
+          display: 'flex',
+          flexDirection: 'column',
+          padding: '8px 0',
+          zIndex: 40,
+        }}>
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link 
+                key={item.href} 
+                href={item.href} 
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  color: isActive ? '#ffffff' : 'rgba(255,255,255,0.7)',
+                  fontSize: '18px',
+                  fontWeight: isActive ? 700 : 500,
+                  textDecoration: 'none',
+                  padding: '16px 24px',
+                  borderLeft: isActive ? '4px solid #fff' : '4px solid transparent',
+                  backgroundColor: isActive ? 'rgba(255,255,255,0.05)' : 'transparent',
+                }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+      )}
     </header>
   );
 }
