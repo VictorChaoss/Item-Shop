@@ -836,7 +836,7 @@ export default function Home() {
               position: 'relative', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)',
             }}>
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '38px', backgroundColor: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', paddingLeft: '32px', zIndex: 12 }}>
-                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + CHROME HEARTS, NICOTINE ADDICTION AND A FAKE ROLEX INCLUDED</span>
+                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + CHROME HEARTS, NICOTINE ADDICTION AND A CURRY POTION INCLUDED</span>
               </div>
               <div style={{ position: 'absolute', bottom: '50px', right: '28px', width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '28px', fontWeight: 300, cursor: 'pointer', backdropFilter: 'blur(8px)', zIndex: 15 }}>+</div>
               <div style={{ position: 'absolute', bottom: '60px', left: '32px', zIndex: 10 }}>
@@ -902,10 +902,10 @@ export default function Home() {
 
             {/* Card 3 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/rolex.png" alt="Rolex" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/curry_potion.png" alt="Curry Potion" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
-                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Rolex</h3>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Curry Potion</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
               </div>
             </div>
