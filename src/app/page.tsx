@@ -882,7 +882,7 @@ export default function Home() {
           <div className="item-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
             {/* Card 1 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/chrome_bag.png" alt="Chrome Bag" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/chrome_bag.png" alt="Chrome Bag" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', maxHeight: '60%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Chrome Bag</h3>
@@ -892,7 +892,7 @@ export default function Home() {
             
             {/* Card 2 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/vape_axe.png" alt="Vape Axe" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/vape_axe.png" alt="Vape Axe" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', maxHeight: '60%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Vape Axe</h3>
@@ -902,7 +902,7 @@ export default function Home() {
 
             {/* Card 3 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/curry_potion.png" alt="Curry Potion" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <img src="/images/curry_potion.png" alt="Curry Potion" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '75%', maxHeight: '60%', width: 'auto', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Curry Potion</h3>
