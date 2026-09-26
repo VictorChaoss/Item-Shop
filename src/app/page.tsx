@@ -470,7 +470,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/two_state_solution.jpg" alt="Two State Solution" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/two_state_solution.jpg" alt="Two State Solution" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', zIndex: 1, mixBlendMode: 'screen'}} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Two State Solution</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -489,7 +489,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/talking_point.jpg" alt="The Talking Point" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/talking_point.jpg" alt="The Talking Point" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', zIndex: 1, mixBlendMode: 'screen'}} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Talking Point</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -508,7 +508,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/ceasefire_report.jpg" alt="The Ceasefire Report" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/ceasefire_report.jpg" alt="The Ceasefire Report" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', zIndex: 1, mixBlendMode: 'screen'}} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Ceasefire Report</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -724,7 +724,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/little_saint_james_map.png" alt="Map of Little Saint James" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/little_saint_james_map.png" alt="Map of Little Saint James" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', zIndex: 1, mixBlendMode: 'screen'}} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Map of Little Saint James</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
@@ -743,7 +743,7 @@ export default function Home() {
               position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
               overflow: 'hidden',
             }}>
-              <img src="/images/epstein_files_classified.jpg" alt="The Classified Files" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/epstein_files_classified.jpg" alt="The Classified Files" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', zIndex: 1, mixBlendMode: 'screen'}} />
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Classified Files</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
