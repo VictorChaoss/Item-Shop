@@ -827,48 +827,88 @@ export default function Home() {
         <div className="section-container" ref={(el) => { sectionRefs.current.teal = el; }} style={{
           width: '100%', paddingLeft: '90px', paddingRight: '40px', paddingTop: '60px', paddingBottom: '80px',
         }}>
-          <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>SECTION 5</h2>
+          <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>LA VAPE CABAL</h2>
 
           <div style={{ width: '100%', position: 'relative', marginBottom: '20px' }}>
-            <div style={{
+            <div className="hero-card" style={{
               width: '100%', height: '380px', borderRadius: '20px',
               background: 'linear-gradient(135deg, #32bcd0 0%, #1e8a9a 50%, #10606e 100%)',
               position: 'relative', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)',
             }}>
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '38px', backgroundColor: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', paddingLeft: '32px', zIndex: 12 }}>
-                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + PLACEHOLDER ITEMS</span>
+                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + CHROME BAG, VAPE AXE AND ROLEX INCLUDED</span>
               </div>
               <div style={{ position: 'absolute', bottom: '50px', right: '28px', width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '28px', fontWeight: 300, cursor: 'pointer', backdropFilter: 'blur(8px)', zIndex: 15 }}>+</div>
               <div style={{ position: 'absolute', bottom: '60px', left: '32px', zIndex: 10 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
-                <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>Bundle Name</h3>
+                <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>The LA Vape Cabal Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
-                  <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>3,200</span>
-                  <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>5,400</span>
+                  <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>4,200</span>
+                  <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>6,000</span>
                 </div>
+              </div>
+            </div>
+
+            {/* Characters */}
+            <div className="character-container" style={{
+              position: 'absolute', right: '40px', bottom: '40px',
+              display: 'flex', alignItems: 'flex-end', zIndex: 6,
+            }}>
+              <div style={{
+                height: '420px', marginRight: '-80px', position: 'relative', zIndex: 1,
+                maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+              }}>
+                <img src="/images/frank.png" alt="Frank" style={{ height: '100%', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 25px rgba(100,140,255,0.6)) drop-shadow(0 0 50px rgba(80,120,255,0.3))' }} />
+              </div>
+              <div style={{
+                height: '440px', marginRight: '-80px', position: 'relative', zIndex: 3,
+                maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+              }}>
+                <img src="/images/thread_guy.png" alt="Thread Guy" style={{ height: '100%', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 25px rgba(100,140,255,0.6)) drop-shadow(0 0 50px rgba(80,120,255,0.3))' }} />
+              </div>
+              <div style={{
+                height: '420px', position: 'relative', zIndex: 2,
+                maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+              }}>
+                <img src="/images/banks.png" alt="Banks" style={{ height: '100%', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 25px rgba(100,140,255,0.6)) drop-shadow(0 0 50px rgba(80,120,255,0.3))' }} />
               </div>
             </div>
           </div>
 
           <div className="item-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
-            {['Item 1', 'Item 2', 'Item 3'].map((name, i) => (
-              <div key={i} style={{
-                height: '320px', borderRadius: '20px',
-                background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)',
-                padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-                position: 'relative', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)',
-              }}>
-                <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase' }}>NEW!</span>
-                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>{name}</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                  </div>
-                  <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
-                </div>
+            {/* Card 1 */}
+            <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img src="/images/chrome_bag.png" alt="Chrome Bag" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <div style={{ position: 'relative', zIndex: 5 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Chrome Bag</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
-            ))}
+            </div>
+            
+            {/* Card 2 */}
+            <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img src="/images/vape_axe.png" alt="Vape Axe" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <div style={{ position: 'relative', zIndex: 5 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Vape Axe</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #40d4e6 0%, #1e8e9e 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img src="/images/rolex.png" alt="Rolex" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '75%', height: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))', zIndex: 1 }} />
+              <div style={{ position: 'relative', zIndex: 5 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Rolex</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
+              </div>
+            </div>
           </div>
         </div>
 
