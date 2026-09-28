@@ -281,7 +281,7 @@ export default function PromoGenerator() {
           <div ref={promoRef} style={{ width: '1920px', height: '1080px', background: '#0a0a0a', position: 'relative', overflow: 'hidden', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{ width: '1600px', height: '800px', backgroundColor: '#111', border: '4px solid #333', borderRadius: '24px', display: 'flex', overflow: 'hidden' }}>
               <div style={{ flex: '0 0 600px', background: bundle.bg, display: 'flex', alignItems: 'flex-end', justifyContent: 'center', position: 'relative' }}>
-                <img src={`/images/${boundle.characters[0]}`} alt="Character" style={{ height: '90%', filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.8))' }} />
+                <img src={`/images/${bundle.characters[0]}`} alt="Character" style={{ height: '90%', filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.8))' }} />
               </div>
               <div style={{ flex: 1, padding: '80px', display: 'flex', flexDirection: 'column' }}>
                 <h2 style={{ color: '#fce000', fontSize: '40px', fontWeight: 'bold', marginBottom: '10px', textTransform: 'uppercase' }}>OFFICIAL UPDATE</h2>
