@@ -156,8 +156,8 @@ export default function PromoGenerator() {
           }}
         >
           {/* Top Left Text */}
-          <div style={{ position: 'absolute', top: '100px', left: '120px', zIndex: 20 }}>
-            <h1 className="fortnite-header" style={{ fontSize: '180px', lineHeight: '0.85', margin: 0, textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>ITEM SHOP</h1>
+          <div style={{ position: 'absolute', top: '100px', left: '120px', zIndex: 10 }}>
+            <h1 className="fortnite-header" style={{ fontSize: '160px', lineHeight: '0.85', margin: 0, textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>ITEM SHOP</h1>
             <h2 className="fortnite-header" style={{ fontSize: '70px', color: '#fce000', margin: '20px 0 0 0', textShadow: '0 5px 15px rgba(0,0,0,0.5)' }}>{bundle.title}</h2>
           </div>
 
@@ -210,7 +210,7 @@ export default function PromoGenerator() {
             display: 'flex',
             alignItems: 'flex-end',
             justifyContent: 'center',
-            zIndex: 10
+            zIndex: 30
           }}>
             {bundle.characters.map((char, i) => (
               <img 
