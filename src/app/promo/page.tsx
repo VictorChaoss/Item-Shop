@@ -95,7 +95,7 @@ export default function PromoGenerator() {
 
   const handleDownload = async () => {
     if (!promoRef.current) return;
-    isExporting(false);
+    setIsExporting(false);
     setIsExporting(true);
     try {
       const ratio = layout === 'poster' ? 2 : 1; 
@@ -152,7 +152,7 @@ export default function PromoGenerator() {
           <div ref={promoRef} style={{ width: '1920px', height: '1080px', background: bundle.bg, position: 'relative', overflow: 'hidden', flexShrink: 0 }}>
             <div style={{ position: 'absolute', top: '100px', left: '120px', zIndex: 10 }}>
               <h1 className="fortnite-header" style={{ fontSize: '160px', lineHeight: '0.85', margin: 0, textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>ITEM SHOP</h1>
-              <h2 className="fortnite-header" style={{ fontSize: '70px', color: '#fce000', margin: '20px 0 0 0', textShadow: '0 5px 15px rgba(0,0,0,0.5)' }}>;bundle.title}</h2>
+              <h2 className="fortnite-header" style={{ fontSize: '70px', color: '#fce000', margin: '20px 0 0 0', textShadow: '0 5px 15px rgba(0,0,0,0.5)' }}>{bundle.title}</h2>
             </div>
             <div style={{ position: 'absolute', bottom: '100px', left: '120px', width: '500px', zIndex: 15 }}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -254,7 +254,7 @@ export default function PromoGenerator() {
         {/* 6. CHOOSE YOUR FIGHTER (SPLIT)                       */}
         {/* ==================================================== */}
         {layout === 'split' && (
-          <div ref={promoRef} style={{ width: '1920px', height: '1080px', background: #0x0', position: 'relative', overflow: 'hidden', flexShrink: 0, display: 'flex' }}>
+          <div ref={promoRef} style={{ width: '1920px', height: '1080px', background: '#000', position: 'relative', overflow: 'hidden', flexShrink: 0, display: 'flex' }}>
             {bundle.characters.slice(0,2).map((char: string, i: number) => (
               <div key={i} style={{ flex: 1, height: '100%', position: 'relative', borderRight: i === 0 ? '10px solid #fce000' : 'none', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', background: i === 0 ? 'radial-gradient(circle at 50% 50%, #8b1010 0%, #1a0202 100%)' : 'radial-gradient(circle at 50% 50%, #175a96 0%, #041224 100%)' }}>
                 <img src={`/images/${char}`} alt="Character" style={{ height: '90%', filter: 'drop-shadow(0 0 30px rgba(0,0,0,0.8))' }} />
