@@ -107,7 +107,9 @@ export default function Home() {
             {SECTION_KEYS.map((key, i) => {
               const isActive = i === activeSection;
               return (
-                <button key={key} style={{
+                <button key={key} onClick={() => {
+                  sectionRefs.current[key]?.scrollIntoView({ behavior: 'smooth' });
+                }} style={{
                   width: isActive ? '14px' : '8px',
                   height: isActive ? '14px' : '8px',
                   borderRadius: '50%',
