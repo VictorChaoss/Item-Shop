@@ -21,26 +21,46 @@ export default function Home() {
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-    
-    Object.entries(sectionRefs.current).forEach(([key, el]) => {
-      if (!el) return;
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
-              setBgColor(SECTION_COLORS[key] || SECTION_COLORS.blue);
-              setActiveSection(SECTION_KEYS.indexOf(key));
-            }
-          });
-        },
-        { threshold: [0.2, 0.5] }
-      );
-      observer.observe(el);
-      observers.push(observer);
+    const visibilityMap = new Map<string, number>();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const key = Object.keys(sectionRefs.current).find(k => sectionRefs.current[k] === entry.target);
+          if (key) {
+            visibilityMap.set(key, entry.intersectionRatio);
+          }
+        });
+
+        let bestKey = SECTION_KEYS[0];
+        let maxRatio = 0;
+        
+        SECTION_KEYS.forEach((key) => {
+          const ratio = visibilityMap.get(key) || 0;
+          if (ratio > maxRatio) {
+            maxRatio = ratio;
+            bestKey = key;
+          }
+        });
+
+        // If at the very bottom of the page, force the last section
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+          bestKey = SECTION_KEYS[SECTION_KEYS.length - 1];
+        }
+
+        setBgColor(SECTION_COLORS[bestKey] || SECTION_COLORS.blue);
+        setActiveSection(SECTION_KEYS.indexOf(bestKey));
+      },
+      { 
+        threshold: Array.from({length: 21}, (_, i) => i * 0.05) 
+      }
+    );
+
+    Object.values(sectionRefs.current).forEach(el => {
+      if (el) observer.observe(el);
     });
 
-    return () => observers.forEach((o) => o.disconnect());
+    return () => observer.disconnect();
   }, []);
 
   return (
