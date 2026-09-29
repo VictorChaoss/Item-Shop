@@ -62,6 +62,10 @@ const bundles = [
   {
     id: 'degen', title: 'THE MAX WIN BUNDLE', bg: 'radial-gradient(circle at 50% 50%, #3b2f15 0%, #110d04 100%)',
     characters: ['steve.png', 'togi.png'], items: ['iou.png', 'lucky_pickaxe.png', 'the_juice.png', 'the_last_bet.png']
+  },
+  {
+    id: 'wolf', title: 'THE WOLF BUNDLE', bg: 'radial-gradient(circle at 50% 50%, #08192b 0%, #02080d 100%)',
+    characters: ['donnie.png', 'jordan.png'], items: ['aerotyne.png', 'countach.png', 'quaalude.png']
   }
 ];
 
