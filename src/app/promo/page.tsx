@@ -54,6 +54,10 @@ const bundles = [
   {
     id: 'vape', title: 'EXTRA CHROMEYS BUNDLE', bg: RANDOM_BGS[4],
     characters: ['frank.png', 'thread_guy.png', 'banks.png'], items: ['chrome_bag.png', 'vape_axe.png', 'curry_potion.png']
+  },
+  {
+    id: 'matrix', title: 'THE TOP G BUNDLE', bg: 'radial-gradient(circle at 50% 50%, #103010 0%, #051005 100%)',
+    characters: ['talisman_tate.png', 'top_g.png'], items: ['matrix_item1.jpg', 'matrix_item2.jpg', 'matrix_item3.jpg', 'matrix_item4.jpg']
   }
 ];
 
