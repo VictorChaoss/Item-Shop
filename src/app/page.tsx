@@ -861,6 +861,7 @@ export default function Home() {
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Curry Potion</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
               </div>
+            </div>
           </div>
         </div>
 
@@ -877,7 +878,7 @@ export default function Home() {
               position: 'relative', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)',
             }}>
               <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '38px', backgroundColor: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', paddingLeft: '32px', zIndex: 12 }}>
-                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + BUGATTI, CIGAR, SPARKLING WATER AND MATRIX GLIDER INCLUDED</span>
+                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + BUGATTI, JOHNNY WALKER AND CIGAR, RED PILL AND SPARKLING WATER INCLUDED</span>
               </div>
               <div style={{ position: 'absolute', bottom: '50px', right: '28px', width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '28px', fontWeight: 300, cursor: 'pointer', backdropFilter: 'blur(8px)', zIndex: 15 }}>+</div>
               <div style={{ position: 'absolute', bottom: '60px', left: '32px', zIndex: 10 }}>
@@ -916,7 +917,7 @@ export default function Home() {
           <div className="item-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
             {/* Card 1 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #1a401a 0%, #0a200a 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/matrix_item1.jpg" alt="Bugatti" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'cover', borderRadius: '10px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/matrix_bugatti.png" alt="Bugatti" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Bugatti</h3>
@@ -926,30 +927,30 @@ export default function Home() {
             
             {/* Card 2 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #1a401a 0%, #0a200a 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/matrix_item2.jpg" alt="Cigar" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'cover', borderRadius: '10px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/matrix_cigar.png" alt="Johnny Walker and Cigar" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
-                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Cigar</h3>
+                <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Johnny Walker & Cigar</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
               </div>
             </div>
 
             {/* Card 3 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #1a401a 0%, #0a200a 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/matrix_item3.jpg" alt="Sparkling Water" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'cover', borderRadius: '10px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/matrix_red_pill.png" alt="Red Pill" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
-                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Sparkling Water</h3>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Red Pill</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>200</span></div>
               </div>
             </div>
 
             {/* Card 4 */}
             <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #1a401a 0%, #0a200a 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img src="/images/matrix_item4.jpg" alt="Matrix Glider" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'cover', borderRadius: '10px', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <img src="/images/matrix_water.png" alt="Sparkling Water" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
-                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Matrix Glider</h3>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Sparkling Water</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>

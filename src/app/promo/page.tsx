@@ -57,7 +57,7 @@ const bundles = [
   },
   {
     id: 'matrix', title: 'THE TOP G BUNDLE', bg: 'radial-gradient(circle at 50% 50%, #103010 0%, #051005 100%)',
-    characters: ['talisman_tate.png', 'top_g.png'], items: ['matrix_item1.jpg', 'matrix_item2.jpg', 'matrix_item3.jpg', 'matrix_item4.jpg']
+    characters: ['talisman_tate.png', 'top_g.png'], items: ['matrix_bugatti.png', 'matrix_cigar.png', 'matrix_red_pill.png', 'matrix_water.png']
   }
 ];
 
