@@ -13,9 +13,10 @@ const SECTION_COLORS: Record<string, string> = {
   matrix: '#082508',
   degen: '#3b2f15',
   wolf: '#08192b',
+  mars: '#3d1607',
 };
 
-const SECTION_KEYS = ['blue', 'red', 'green', 'purple', 'teal', 'matrix', 'degen', 'wolf'];
+const SECTION_KEYS = ['blue', 'red', 'green', 'purple', 'teal', 'matrix', 'degen', 'wolf', 'mars'];
 
 export default function Home() {
   const [bgColor, setBgColor] = useState(SECTION_COLORS.blue);
@@ -1149,6 +1150,81 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Quaaludes</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* === THE MARS BUNDLE SECTION === */}
+        <div className="section-container" ref={(el) => { sectionRefs.current.mars = el; }} style={{
+          width: '100%', paddingLeft: '90px', paddingRight: '40px', paddingTop: '60px', paddingBottom: '80px',
+        }}>
+          <h2 className="fortnite-header section-title" style={{ fontSize: '48px', color: '#ffffff', lineHeight: 1, marginBottom: '24px' }}>MARS BOUND</h2>
+
+          <div style={{ width: '100%', position: 'relative', marginBottom: '20px' }}>
+            <div className="hero-card" style={{
+              width: '100%', height: '380px', borderRadius: '20px',
+              background: 'linear-gradient(135deg, #3d1607 0%, #210a01 50%, #120500 100%)',
+              position: 'relative', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.08)',
+            }}>
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '38px', backgroundColor: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', paddingLeft: '32px', zIndex: 12 }}>
+                <span style={{ fontSize: '12px', fontWeight: 700, color: '#333', letterSpacing: '0.5px', textTransform: 'uppercase' }}>BUNDLE &nbsp; + CYBERTRUCK, FLAMETHROWER AND SPACEX BACKPACK INCLUDED</span>
+              </div>
+              <div style={{ position: 'absolute', bottom: '50px', right: '28px', width: '40px', height: '40px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '28px', fontWeight: 300, cursor: 'pointer', backdropFilter: 'blur(8px)', zIndex: 15 }}>+</div>
+              <div style={{ position: 'absolute', bottom: '60px', left: '32px', zIndex: 10 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
+                <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>The Mars Bundle</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>3,500</span>
+                  <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>5,500</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Characters */}
+            <div className="character-container" style={{
+              position: 'absolute', right: '40px', bottom: '40px',
+              display: 'flex', alignItems: 'flex-end', zIndex: 6,
+            }}>
+              <div style={{
+                height: '420px', position: 'relative', zIndex: 1,
+                maskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 55%, transparent 90%)',
+              }}>
+                <img src="/images/elon.png" alt="Elon Musk" style={{ height: '100%', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 25px rgba(255,100,50,0.6)) drop-shadow(0 0 50px rgba(255,100,50,0.3))' }} />
+              </div>
+            </div>
+          </div>
+
+          <div className="item-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+            {/* Card 1 */}
+            <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #3d1607 0%, #210a01 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img src="/images/cybertruck.jpg" alt="Cybertruck" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <div style={{ position: 'relative', zIndex: 5 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Cybertruck</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>2,000</span></div>
+              </div>
+            </div>
+            
+            {/* Card 2 */}
+            <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #3d1607 0%, #210a01 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img src="/images/flamethrower.jpg" alt="Flamethrower" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <div style={{ position: 'relative', zIndex: 5 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Flamethrower</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div style={{ height: '320px', borderRadius: '20px', background: 'linear-gradient(180deg, #3d1607 0%, #210a01 100%)', padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', position: 'relative', overflow: 'hidden', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img src="/images/spacex_backpack.jpg" alt="SpaceX Backpack" style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '65%', objectFit: 'contain', filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.4))', zIndex: 1 }} />
+              <div style={{ position: 'relative', zIndex: 5 }}>
+                <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
+                <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>SpaceX Backpack</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
