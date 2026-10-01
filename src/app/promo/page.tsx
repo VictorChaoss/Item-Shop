@@ -70,6 +70,10 @@ const bundles = [
   {
     id: 'mars', title: 'THE MARS BUNDLE', bg: 'radial-gradient(circle at 50% 50%, #3d1607 0%, #120500 100%)',
     characters: ['elon.png'], items: ['cybertruck.png', 'flamethrower.png', 'spacex_backpack.png']
+  },
+  {
+    id: 'diddy', title: 'THE DIDDY PARTY BUNDLE', bg: 'radial-gradient(circle at 50% 50%, #360521 0%, #17020f 100%)',
+    characters: ['p_diddy.png'], items: ['baby_oil_backpack.png', 'nda.png', 'party_invitation.png']
   }
 ];
 
