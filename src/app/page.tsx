@@ -156,7 +156,6 @@ export default function Home() {
           paddingRight: '40px',
           paddingTop: '40px',
           paddingBottom: '80px',
-          maxWidth: '1400px',
         }}>
           
           {/* Title Row */}
