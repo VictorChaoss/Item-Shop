@@ -2,7 +2,18 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
+import Link from 'next/link';
+import { X, Copy, Check, ArrowUpRight, Sparkles } from 'lucide-react';
 import BackgroundEffects from '@/components/effects/BackgroundEffects';
+import { SITE_CONFIG } from '@/config/site';
+
+interface InspectedItem {
+  title: string;
+  price: string;
+  image?: string;
+  subtitle?: string;
+  isBundle?: boolean;
+}
 
 const SECTION_COLORS: Record<string, string> = {
   blue: '#0a3d7a',
@@ -23,7 +34,57 @@ export default function Home() {
   const [bgColor, setBgColor] = useState(SECTION_COLORS.blue);
   const [activeSection, setActiveSection] = useState(0);
   const [countdown, setCountdown] = useState('6D 04:24:12');
+  const [inspectedItem, setInspectedItem] = useState<InspectedItem | null>(null);
+  const [copiedCA, setCopiedCA] = useState(false);
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
+
+  const handleCopyCA = () => {
+    navigator.clipboard.writeText(SITE_CONFIG.contractAddress);
+    setCopiedCA(true);
+    setTimeout(() => setCopiedCA(false), 2000);
+  };
+
+  const handleShopClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('a, button')) return;
+
+    // Check if user clicked inside an individual item card inside .item-grid
+    const itemGrid = target.closest('.item-grid');
+    if (itemGrid) {
+      const card = Array.from(itemGrid.children).find((child) => child.contains(target)) as HTMLElement | undefined;
+      if (card) {
+        const title = card.querySelector('h3')?.textContent?.trim() || 'Item Shop Cosmetic';
+        const imgs = card.querySelectorAll('img');
+        const mainImg = imgs[0]?.getAttribute('src') || undefined;
+        const spans = card.querySelectorAll('span');
+        const price = spans[spans.length - 1]?.textContent?.trim() || '800';
+        setInspectedItem({
+          title,
+          price,
+          image: mainImg,
+          subtitle: 'ITEM SHOP COSMETIC • UNLOCK WITH $VBUCKS',
+          isBundle: false,
+        });
+        return;
+      }
+    }
+
+    // Check if user clicked inside a hero bundle banner
+    const heroCard = target.closest('.hero-card') as HTMLElement | null;
+    if (heroCard) {
+      const wrapper = heroCard.parentElement;
+      const title = heroCard.querySelector('.bundle-title')?.textContent?.trim() || 'Featured Bundle';
+      const subtitle = heroCard.querySelector('span')?.textContent?.trim() || 'FEATURED ITEM SHOP BUNDLE';
+      const charImg = wrapper?.querySelector('.character-container img')?.getAttribute('src') || undefined;
+      setInspectedItem({
+        title,
+        price: '2,800',
+        image: charImg,
+        subtitle,
+        isBundle: true,
+      });
+    }
+  };
 
   useEffect(() => {
     const updateTimer = () => {
@@ -104,7 +165,7 @@ export default function Home() {
 
       <BackgroundEffects />
       
-      <div style={{ flex: 1, width: '100%', position: 'relative', zIndex: 5 }}>
+      <div onClick={handleShopClick} style={{ flex: 1, width: '100%', position: 'relative', zIndex: 5 }}>
         
         {/* Filter Button — floats separately above the pill */}
         <button className="filter-button" style={{
@@ -1319,7 +1380,284 @@ export default function Home() {
           </div>
         </div>
 
+        {/* === BOTTOM ITEM SHOP CTA FOOTER === */}
+        <footer className="section-container" style={{
+          width: '100%',
+          paddingLeft: '90px',
+          paddingRight: '40px',
+          paddingBottom: '70px',
+        }}>
+          <div style={{
+            width: '100%',
+            borderRadius: '22px',
+            background: 'linear-gradient(135deg, rgba(16, 24, 48, 0.92) 0%, rgba(8, 12, 24, 0.96) 100%)',
+            border: '2px solid rgba(78, 176, 255, 0.3)',
+            padding: '36px 36px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '24px',
+            boxShadow: '0 20px 50px rgba(0,0,0,0.6)',
+          }}>
+            <div style={{ maxWidth: '580px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '4px 10px', borderRadius: '4px', textTransform: 'uppercase', marginBottom: '10px' }}>
+                <Sparkles size={13} strokeWidth={3} /> NEW SHOP ROTATION EVERY WEEK
+              </div>
+              <h3 className="fortnite-header" style={{ fontSize: '36px', color: '#fff', lineHeight: 1.05, marginBottom: '8px' }}>
+                THE SITE IS THE ITEM SHOP. $VBUCKS IS THE CURRENCY.
+              </h3>
+              <p style={{ fontSize: '15px', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>
+                Hold <strong>$VBUCKS</strong> on Solana and earn <strong>1% automatic USDC holder rewards</strong> on every transfer. Every new Item Shop rotation drops a fresh NFT collection.
+              </p>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+              <button
+                onClick={handleCopyCA}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  backgroundColor: 'rgba(78,176,255,0.15)',
+                  border: '1.5px solid #4eb0ff',
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: '13px',
+                  fontFamily: 'monospace',
+                  padding: '13px 18px',
+                  borderRadius: '10px',
+                  cursor: 'pointer',
+                }}
+              >
+                <img src="/images/vbucks_logo.png" alt="V" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
+                {copiedCA ? 'COPIED TO CLIPBOARD!' : `CA: ${SITE_CONFIG.contractAddress}`}
+                {copiedCA ? <Check size={16} color="#4eff8c" /> : <Copy size={16} color="#4eb0ff" />}
+              </button>
+
+              <Link
+                href="/tokenomics"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  background: 'linear-gradient(90deg, #44227f 0%, #2f47d9 100%)',
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: '14px',
+                  padding: '13px 20px',
+                  borderRadius: '10px',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                TOKENOMICS
+              </Link>
+
+              <a
+                href={SITE_CONFIG.xUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: '#fce000',
+                  color: '#000',
+                  fontWeight: 900,
+                  fontSize: '14px',
+                  padding: '13px 20px',
+                  borderRadius: '10px',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                FOLLOW {SITE_CONFIG.xHandle} <ArrowUpRight size={16} strokeWidth={3} />
+              </a>
+            </div>
+          </div>
+        </footer>
+
       </div>
+
+      {/* === FORTNITE ITEM INSPECTION MODAL === */}
+      {inspectedItem && (
+        <div
+          onClick={() => setInspectedItem(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 100,
+            backgroundColor: 'rgba(4, 10, 24, 0.84)',
+            backdropFilter: 'blur(12px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px',
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '520px',
+              borderRadius: '24px',
+              background: 'radial-gradient(circle at 50% 25%, #3b82f6 0%, #1d4ed8 48%, #0f172a 100%)',
+              border: '2px solid rgba(255,255,255,0.3)',
+              boxShadow: '0 28px 80px rgba(0,0,0,0.8)',
+              overflow: 'hidden',
+              padding: '28px 28px 68px',
+              textAlign: 'center',
+            }}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setInspectedItem(null)}
+              style={{
+                position: 'absolute',
+                top: '16px',
+                right: '16px',
+                width: '38px',
+                height: '38px',
+                borderRadius: '50%',
+                backgroundColor: 'rgba(0,0,0,0.5)',
+                border: '1px solid rgba(255,255,255,0.25)',
+                color: '#fff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                zIndex: 10,
+              }}
+            >
+              <X size={20} />
+            </button>
+
+            <span style={{
+              display: 'inline-block',
+              backgroundColor: '#fce000',
+              color: '#000',
+              fontWeight: 900,
+              fontSize: '11px',
+              padding: '4px 10px',
+              borderRadius: '4px',
+              letterSpacing: '0.8px',
+              textTransform: 'uppercase',
+              marginBottom: '12px',
+            }}>
+              {inspectedItem.isBundle ? 'FEATURED SHOP BUNDLE' : 'ITEM SHOP COSMETIC'}
+            </span>
+
+            {inspectedItem.image && (
+              <div style={{
+                height: '240px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '8px auto 16px',
+              }}>
+                <img
+                  src={inspectedItem.image}
+                  alt={inspectedItem.title}
+                  style={{
+                    maxHeight: '230px',
+                    maxWidth: '90%',
+                    objectFit: 'contain',
+                    filter: 'drop-shadow(0 16px 28px rgba(0,0,0,0.65))',
+                  }}
+                />
+              </div>
+            )}
+
+            <h3 className="fortnite-header" style={{ fontSize: '38px', color: '#fff', lineHeight: 1.05, marginBottom: '10px' }}>
+              {inspectedItem.title}
+            </h3>
+
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              backgroundColor: 'rgba(0,0,0,0.45)',
+              padding: '8px 18px',
+              borderRadius: '999px',
+              border: '1px solid rgba(255,255,255,0.2)',
+              marginBottom: '18px',
+            }}>
+              <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
+              <span style={{ fontSize: '22px', fontWeight: 800, color: '#fff' }}>{inspectedItem.price}</span>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: '#4eb0ff', marginLeft: '4px' }}>$VBUCKS</span>
+            </div>
+
+            <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.88)', lineHeight: 1.55, marginBottom: '22px' }}>
+              Equip this item in the upcoming <strong>Item Shop NFT Collection &amp; PFP Locker</strong>. Hold <strong>$VBUCKS</strong> on Solana to earn <strong>1% automatic USDC rewards</strong>.
+            </p>
+
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link
+                href="/tokenomics"
+                onClick={() => setInspectedItem(null)}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: '#fce000',
+                  color: '#000',
+                  fontWeight: 900,
+                  fontSize: '14px',
+                  padding: '13px 22px',
+                  borderRadius: '10px',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                GET $VBUCKS
+              </Link>
+
+              <a
+                href={`https://x.com/intent/tweet?text=${encodeURIComponent(`Checking out ${inspectedItem.title} in the Item Shop! 🛒\n\nThe site is the Item Shop. $VBUCKS is the currency (1% automatic USDC rewards).\n\n@STONKVBUCKS`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'rgba(0,0,0,0.55)',
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: '14px',
+                  padding: '13px 18px',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(255,255,255,0.25)',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                SHARE ON 𝕏 <ArrowUpRight size={16} />
+              </a>
+            </div>
+
+            {/* Bottom White Strip */}
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: '38px',
+              backgroundColor: 'rgba(255,255,255,0.92)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '0 16px',
+            }}>
+              <span style={{ fontSize: '11px', fontWeight: 900, color: '#111', letterSpacing: '0.6px', textTransform: 'uppercase' }}>
+                PART OF THE GENESIS 3,000 ITEM SHOP NFT ROSTER
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+

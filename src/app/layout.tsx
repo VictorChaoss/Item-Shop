@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     siteName: "Item Shop ($VBUCKS)",
     images: [
       {
-        url: "/images/vbucks_logo.png",
-        width: 1000,
-        height: 1000,
-        alt: "$VBUCKS — Official Item Shop Currency",
+        url: "/images/og_banner.png",
+        width: 1200,
+        height: 630,
+        alt: "ITEM SHOP | $VBUCKS — 1% Automatic USDC Holder Rewards",
       },
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "ITEM SHOP | $VBUCKS — 1% Automatic USDC Rewards",
     description:
       "The site is the Item Shop. $VBUCKS is the currency. Hold $VBUCKS on Solana and earn 1% automatic USDC holder rewards.",
-    images: ["/images/vbucks_logo.png"],
+    images: ["/images/og_banner.png"],
   },
 };
 
