@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ArrowUpRight, Copy, Check, Sparkles, BarChart3, Users, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, Copy, Check, Sparkles, BarChart3, Users, DollarSign } from 'lucide-react';
 import BackgroundEffects from '@/components/effects/BackgroundEffects';
 
 const CONTRACT_ADDRESS = 'COMING SOON — LAUNCHING ON STONKFUN.XYZ';
@@ -24,7 +24,7 @@ export default function SocialsPage() {
       tagColor: '#4eff8c',
       description: 'Official announcements, new Item Shop character drops, contract launch alerts, and daily memes.',
       bg: 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #4eb0ff 100%)',
-      character: '/images/togi.png',
+      badge: '𝕏',
       url: 'https://x.com/STONKVBUCKS',
       cta: 'FOLLOW @STONKVBUCKS',
     },
@@ -36,7 +36,7 @@ export default function SocialsPage() {
       tagColor: '#fce000',
       description: 'Jump in the lobby with the rest of the holders — raids, memes, bundle ideas, and degen talk.',
       bg: 'linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #a855f7 100%)',
-      character: '/images/thread_guy.png',
+      badge: 'USERS',
       url: 'https://x.com/STONKVBUCKS',
       cta: 'ENTER LOBBY',
     },
@@ -48,7 +48,7 @@ export default function SocialsPage() {
       tagColor: '#34d399',
       description: 'Where $VBUCKS launches on the bonding curve paired with USDC and distributes automatic holder rewards.',
       bg: 'linear-gradient(135deg, #047857 0%, #10b981 50%, #34d399 100%)',
-      character: '/images/jordan.png',
+      badge: 'USDC',
       url: 'https://stonkfun.xyz',
       cta: 'OPEN STONKFUN',
     },
@@ -60,11 +60,18 @@ export default function SocialsPage() {
       tagColor: '#f59e0b',
       description: 'Track real-time price action, market cap, 24h volume, and USDC reward velocity once live.',
       bg: 'linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%)',
-      character: '/images/banks.png',
+      badge: 'CHART',
       url: 'https://dexscreener.com',
       cta: 'VIEW CHARTS',
     },
   ];
+
+  const renderBadgeIcon = (badge: string) => {
+    if (badge === '𝕏') return <span style={{ fontSize: '30px', fontWeight: 900, color: '#fff', lineHeight: 1 }}>𝕏</span>;
+    if (badge === 'USERS') return <Users size={28} color="#fff" strokeWidth={2.5} />;
+    if (badge === 'USDC') return <DollarSign size={28} color="#fff" strokeWidth={2.8} />;
+    return <BarChart3 size={28} color="#fff" strokeWidth={2.5} />;
+  };
 
   return (
     <div style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
@@ -107,11 +114,11 @@ export default function SocialsPage() {
           </h1>
         </div>
 
-        {/* FEATURED X BANNER — Looks like a Fortnite Featured Bundle */}
+        {/* FEATURED X BANNER — Clean Fortnite Banner with 𝕏 Emblem */}
         <div style={{
           position: 'relative',
           width: '100%',
-          minHeight: '320px',
+          minHeight: '300px',
           borderRadius: '22px',
           background: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #1e1b4b 100%)',
           border: '2px solid rgba(255,255,255,0.24)',
@@ -130,7 +137,7 @@ export default function SocialsPage() {
             pointerEvents: 'none',
           }} />
 
-          <div style={{ position: 'relative', zIndex: 10, maxWidth: '640px' }}>
+          <div style={{ position: 'relative', zIndex: 10, maxWidth: '680px' }}>
             <span style={{
               display: 'inline-block',
               backgroundColor: '#fce000',
@@ -199,26 +206,32 @@ export default function SocialsPage() {
             </div>
           </div>
 
-          {/* Right Character Cutouts */}
+          {/* Right X Emblem Badge */}
           <div className="mobile-hide" style={{
             position: 'absolute',
-            right: '28px',
-            bottom: '38px',
+            right: '56px',
+            top: '50%',
+            transform: 'translateY(-58%)',
             display: 'flex',
-            alignItems: 'flex-end',
+            alignItems: 'center',
+            justifyContent: 'center',
             pointerEvents: 'none',
             zIndex: 6,
           }}>
-            <img
-              src="/images/top_g.png"
-              alt="Top G"
-              style={{ height: '320px', objectFit: 'contain', marginRight: '-50px', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.65))' }}
-            />
-            <img
-              src="/images/p_diddy.png"
-              alt="Diddy"
-              style={{ height: '340px', objectFit: 'contain', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.65))' }}
-            />
+            <div style={{
+              width: '190px',
+              height: '190px',
+              borderRadius: '36px',
+              background: 'linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(15,23,42,0.9) 100%)',
+              border: '4px solid rgba(255,255,255,0.85)',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.55), 0 0 50px rgba(78,176,255,0.45)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transform: 'rotate(6deg)',
+            }}>
+              <span style={{ fontSize: '96px', fontWeight: 900, color: '#fff', lineHeight: 1 }}>𝕏</span>
+            </div>
           </div>
 
           {/* Bottom White Fortnite Strip */}
@@ -244,7 +257,7 @@ export default function SocialsPage() {
           </div>
         </div>
 
-        {/* SOCIAL CARDS GRID — Styled like Fortnite Item Shop Bundle Cards */}
+        {/* SOCIAL CARDS GRID — Clean Rarity Cards without Characters */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -258,7 +271,7 @@ export default function SocialsPage() {
               rel="noopener noreferrer"
               style={{
                 position: 'relative',
-                minHeight: '290px',
+                minHeight: '260px',
                 borderRadius: '20px',
                 background: social.bg,
                 border: '2px solid rgba(255,255,255,0.22)',
@@ -272,60 +285,72 @@ export default function SocialsPage() {
                 transition: 'transform 0.2s ease',
               }}
             >
-              {/* Top row badges */}
-              <div style={{ position: 'relative', zIndex: 10, display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span style={{
-                  backgroundColor: 'rgba(0,0,0,0.5)',
-                  color: '#fff',
-                  fontSize: '10px',
-                  fontWeight: 900,
-                  padding: '4px 9px',
-                  borderRadius: '4px',
-                  letterSpacing: '1px',
+              {/* Subtle radial highlight */}
+              <div style={{
+                position: 'absolute',
+                top: '-30%',
+                right: '-20%',
+                width: '200px',
+                height: '200px',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%)',
+                pointerEvents: 'none',
+              }} />
+
+              {/* Top row badges + Icon Box */}
+              <div style={{ position: 'relative', zIndex: 10, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <span style={{
+                    backgroundColor: 'rgba(0,0,0,0.5)',
+                    color: '#fff',
+                    fontSize: '10px',
+                    fontWeight: 900,
+                    padding: '4px 9px',
+                    borderRadius: '4px',
+                    letterSpacing: '1px',
+                  }}>
+                    {social.rarity}
+                  </span>
+                  <span style={{
+                    backgroundColor: social.tagColor,
+                    color: '#000',
+                    fontSize: '10px',
+                    fontWeight: 900,
+                    padding: '4px 9px',
+                    borderRadius: '4px',
+                    letterSpacing: '0.8px',
+                  }}>
+                    {social.tag}
+                  </span>
+                </div>
+
+                <div style={{
+                  width: '54px',
+                  height: '54px',
+                  borderRadius: '14px',
+                  backgroundColor: 'rgba(0,0,0,0.35)',
+                  border: '1.5px solid rgba(255,255,255,0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
                 }}>
-                  {social.rarity}
-                </span>
-                <span style={{
-                  backgroundColor: social.tagColor,
-                  color: '#000',
-                  fontSize: '10px',
-                  fontWeight: 900,
-                  padding: '4px 9px',
-                  borderRadius: '4px',
-                  letterSpacing: '0.8px',
-                }}>
-                  {social.tag}
-                </span>
+                  {renderBadgeIcon(social.badge)}
+                </div>
               </div>
 
               {/* Text Content */}
-              <div style={{ position: 'relative', zIndex: 10, maxWidth: '72%', marginTop: '24px' }}>
+              <div style={{ position: 'relative', zIndex: 10, marginTop: '18px' }}>
                 <p style={{ fontSize: '12px', fontWeight: 900, color: 'rgba(255,255,255,0.85)', letterSpacing: '1px', marginBottom: '4px' }}>
                   {social.name}
                 </p>
                 <h3 className="fortnite-header" style={{ fontSize: '30px', color: '#fff', lineHeight: 1.05, marginBottom: '10px', textShadow: '0 2px 12px rgba(0,0,0,0.35)' }}>
                   {social.handle}
                 </h3>
-                <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.92)', lineHeight: 1.5, fontWeight: 500 }}>
+                <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.92)', lineHeight: 1.55, fontWeight: 500 }}>
                   {social.description}
                 </p>
               </div>
-
-              {/* Character Cutout on Right */}
-              <img
-                src={social.character}
-                alt={social.name}
-                style={{
-                  position: 'absolute',
-                  right: '-10px',
-                  bottom: '34px',
-                  height: '210px',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 10px 18px rgba(0,0,0,0.55))',
-                  pointerEvents: 'none',
-                  zIndex: 5,
-                }}
-              />
 
               {/* Bottom White Rarity Strip */}
               <div style={{

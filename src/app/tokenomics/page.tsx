@@ -216,26 +216,50 @@ export default function TokenomicsPage() {
             </div>
           </div>
 
-          {/* Right side characters showcase (hidden on small screens via flex wrap / absolute) */}
+          {/* Right side V-Bucks Coin Emblem */}
           <div className="mobile-hide" style={{
             position: 'absolute',
-            right: '24px',
-            bottom: '38px',
+            right: '54px',
+            top: '50%',
+            transform: 'translateY(-58%)',
             display: 'flex',
-            alignItems: 'flex-end',
+            alignItems: 'center',
+            justifyContent: 'center',
             pointerEvents: 'none',
             zIndex: 6,
           }}>
-            <img
-              src="/images/elon.png"
-              alt="Elon"
-              style={{ height: '330px', objectFit: 'contain', marginRight: '-60px', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.6))' }}
-            />
-            <img
-              src="/images/donnie.png"
-              alt="Donnie"
-              style={{ height: '360px', objectFit: 'contain', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.7))' }}
-            />
+            <div style={{
+              width: '210px',
+              height: '210px',
+              borderRadius: '50%',
+              background: 'radial-gradient(circle at 30% 30%, #ffffff 0%, #dbeafe 25%, #3b82f6 70%, #1e3a8a 100%)',
+              border: '8px solid rgba(255,255,255,0.9)',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.55), 0 0 60px rgba(78,176,255,0.6), inset 0 -8px 20px rgba(30,58,138,0.6)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transform: 'rotate(-8deg)',
+            }}>
+              <div style={{
+                width: '164px',
+                height: '164px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%)',
+                border: '3px solid rgba(255,255,255,0.35)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <span className="fortnite-header" style={{
+                  fontSize: '112px',
+                  color: '#ffffff',
+                  lineHeight: 1,
+                  textShadow: '0 6px 18px rgba(78,176,255,0.6)',
+                }}>
+                  V
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* White Fortnite Bottom Strip */}
