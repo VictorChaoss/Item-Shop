@@ -1,244 +1,524 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Copy, Check, ShieldCheck, Coins, Flame, Zap, DollarSign, ArrowUpRight } from 'lucide-react';
+import BackgroundEffects from '@/components/effects/BackgroundEffects';
 
-const cardStyle: React.CSSProperties = {
-  width: '100%',
-  maxWidth: '800px',
-  background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-  borderRadius: '16px',
-  padding: '36px 36px',
-  border: '1px solid rgba(255,255,255,0.08)',
-  marginBottom: '24px',
-};
+const CONTRACT_ADDRESS = 'COMING SOON — LAUNCHING ON STONKFUN.XYZ';
 
-const labelStyle: React.CSSProperties = {
-  fontSize: '12px',
-  fontWeight: 700,
-  letterSpacing: '2px',
-  textTransform: 'uppercase',
-  color: '#4eb0ff',
-  marginBottom: '16px',
-};
-
-const bodyStyle: React.CSSProperties = {
-  fontSize: '16px',
-  color: 'rgba(255,255,255,0.6)',
-  lineHeight: 1.8,
-  marginBottom: '14px',
-};
-
-const stats = [
-  { label: 'Ticker', value: '$VBUCKS' },
-  { label: 'Network', value: 'Solana' },
-  { label: 'Total Supply', value: '1 Billion' },
-  { label: 'Transfer Tax', value: '1% → Holders' },
-  { label: 'Trading Fee', value: '1.25%' },
-  { label: 'Rewards Paid In', value: 'USDC' },
+const rarityStats = [
+  {
+    label: 'TICKER',
+    value: '$VBUCKS',
+    sub: 'Official Shop Currency',
+    bg: 'linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #fbbf24 100%)', // Legendary Gold
+    rarity: 'LEGENDARY',
+  },
+  {
+    label: 'TOTAL SUPPLY',
+    value: '1,000,000,000',
+    sub: '1 Billion Fixed Supply',
+    bg: 'linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #a855f7 100%)', // Epic Purple
+    rarity: 'EPIC',
+  },
+  {
+    label: 'HOLDER REWARDS',
+    value: '1% USDC',
+    sub: 'Auto-AirDropped Every Transfer',
+    bg: 'linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%)', // Uncommon Green
+    rarity: 'UNCOMMON',
+  },
+  {
+    label: 'TRADING FEE',
+    value: '1.25%',
+    sub: 'LaunchLab Bonding Curve',
+    bg: 'linear-gradient(135deg, #0284c7 0%, #38bdf8 50%, #4eb0ff 100%)', // Rare Blue
+    rarity: 'RARE',
+  },
+  {
+    label: 'GRADUATION',
+    value: '85 SOL',
+    sub: 'Auto-Migrates to Raydium',
+    bg: 'linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%)', // Mythic Red
+    rarity: 'MYTHIC',
+  },
+  {
+    label: 'NETWORK',
+    value: 'SOLANA',
+    sub: 'Paired with USDC on StonkFun',
+    bg: 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%)', // Rare Blue
+    rarity: 'ICON SERIES',
+  },
 ];
 
 const spendFacts = [
-  { value: '~$5–6B', text: 'estimated yearly Fortnite revenue, most of it from V-Bucks purchases' },
-  { value: '$9B+', text: 'estimated revenue in its first two years alone (2018: ~$5.5B, 2019: ~$3.7B)' },
-  { value: '~$40B', text: 'estimated lifetime player spending since the 2017 launch' },
-  { value: '~110M', text: 'average monthly active players in 2025, from 650M+ registered accounts' },
-];
-
-const rewardSteps = [
-  'You hold $VBUCKS in your own Solana wallet.',
-  'Every transfer of the token pays a 1% tax, set permanently at launch.',
-  'That tax is collected and shared with holders pro-rata, so a bigger bag earns a bigger share.',
-  'Rewards are paid in the token the launch is paired against, USDC, straight to your wallet. No staking and no claim button.',
+  {
+    value: '$5B–$6B / YR',
+    title: 'Annual V-Bucks Velocity',
+    text: 'Estimated yearly Fortnite revenue — almost entirely driven by players buying V-Bucks for Item Shop skins and bundles.',
+    accent: '#fce000',
+  },
+  {
+    value: '$40B+ LIFETIME',
+    title: 'Total Cultural Spend',
+    text: 'Over forty billion dollars spent on digital cosmetics since 2017 with zero financial return to the players.',
+    accent: '#4eb0ff',
+  },
+  {
+    value: '650M+ PLAYERS',
+    title: 'Global Brand Recognition',
+    text: 'Over 110M monthly active users and 650M+ registered accounts instantly recognize the V-Bucks icon and midnight shop rotation.',
+    accent: '#a855f7',
+  },
+  {
+    value: '$9B FIRST 2 YRS',
+    title: 'The Original Runner',
+    text: '$5.5B in 2018 and $3.7B in 2019 alone. V-Bucks is the undisputed #1 digital currency in gaming history.',
+    accent: '#34d399',
+  },
 ];
 
 export default function TokenomicsPage() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(CONTRACT_ADDRESS);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <div style={{
-      minHeight: '100vh',
-      backgroundColor: '#0a0a12',
-      color: '#fff',
-      padding: '80px 20px',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    }}>
-      {/* Hero Section */}
+    <div style={{ minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
+      {/* Fortnite Deep Blue Backdrop matching Discover Page */}
       <div style={{
-        width: '100%',
-        maxWidth: '800px',
-        background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-        borderRadius: '20px',
-        padding: '60px 48px',
-        textAlign: 'center',
-        border: '1px solid rgba(255,255,255,0.08)',
-        marginBottom: '40px',
-      }}>
-        <p style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: '#4eb0ff', marginBottom: '16px' }}>
-          TOKENOMICS
-        </p>
-        <h1 className="fortnite-header" style={{ fontSize: '52px', color: '#ffffff', marginBottom: '20px', lineHeight: 1.1 }}>
-          $VBUCKS
-        </h1>
-        <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, maxWidth: '550px', margin: '0 auto' }}>
-          The currency of the Item Shop, on-chain. Hold it and get paid in USDC.
-        </p>
-      </div>
+        position: 'fixed',
+        inset: 0,
+        zIndex: 0,
+        background: 'radial-gradient(circle at 50% 0%, #175a96 0%, #0a3d7a 45%, #041224 100%)',
+      }} />
 
-      {/* Contract Address */}
-      <div style={{ ...cardStyle, padding: '32px 36px' }}>
-        <p style={{ ...labelStyle, marginBottom: '12px' }}>CONTRACT ADDRESS</p>
-        <div style={{
-          background: 'rgba(0,0,0,0.4)',
-          borderRadius: '10px',
-          padding: '16px 20px',
-          fontFamily: 'monospace',
-          fontSize: '16px',
-          color: 'rgba(255,255,255,0.8)',
-          wordBreak: 'break-all',
-          border: '1px solid rgba(255,255,255,0.06)',
-        }}>
-          PASTE_CONTRACT_ADDRESS_HERE
+      <BackgroundEffects />
+
+      <main style={{
+        position: 'relative',
+        zIndex: 5,
+        maxWidth: '1240px',
+        margin: '0 auto',
+        padding: '48px 24px 100px',
+      }}>
+        {/* Top Page Title Row — exact same vibe as Item Shop Discover */}
+        <div style={{ marginBottom: '32px' }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '12px', padding: '4px 10px', borderRadius: '4px', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <Coins size={14} strokeWidth={3} /> OFFICIAL SHOP CURRENCY
+          </div>
+          <h1 className="fortnite-header" style={{ fontSize: 'clamp(44px, 7vw, 76px)', color: '#ffffff', lineHeight: 0.95, textShadow: '0 4px 24px rgba(0,0,0,0.5)' }}>
+            $VBUCKS TOKENOMICS
+          </h1>
         </div>
-      </div>
 
-      {/* Token Info Grid */}
-      <div style={{
-        width: '100%',
-        maxWidth: '800px',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: '16px',
-        marginBottom: '24px',
-      }}>
-        {stats.map((item, i) => (
-          <div key={i} style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
-            borderRadius: '16px',
-            padding: '28px 24px',
-            border: '1px solid rgba(255,255,255,0.08)',
-            textAlign: 'center',
-          }}>
-            <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', marginBottom: '10px' }}>
-              {item.label}
+        {/* HERO BANNER — Styled like a Fortnite Item Shop Featured Bundle */}
+        <div style={{
+          position: 'relative',
+          width: '100%',
+          minHeight: '360px',
+          borderRadius: '22px',
+          background: 'linear-gradient(135deg, #4eb0ff 0%, #1d4ed8 55%, #0f172a 100%)',
+          border: '2px solid rgba(255,255,255,0.22)',
+          boxShadow: '0 24px 60px rgba(0,0,0,0.55)',
+          overflow: 'hidden',
+          marginBottom: '32px',
+          display: 'flex',
+          alignItems: 'center',
+          padding: '40px 36px 76px',
+        }}>
+          {/* Sunburst rays overlay */}
+          <div style={{
+            position: 'absolute',
+            inset: '-50%',
+            background: ' repeating-conic-gradient(from 0deg, rgba(255,255,255,0.06) 0deg 10deg, transparent 10deg 20deg)',
+            pointerEvents: 'none',
+          }} />
+
+          {/* Left Content */}
+          <div style={{ position: 'relative', zIndex: 10, maxWidth: '680px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px', flexWrap: 'wrap' }}>
+              <span style={{
+                backgroundColor: '#fce000',
+                color: '#000',
+                fontWeight: 900,
+                fontSize: '13px',
+                padding: '4px 12px',
+                borderRadius: '4px',
+                textTransform: 'uppercase',
+              }}>
+                MYTHIC CURRENCY BUNDLE
+              </span>
+              <span style={{
+                backgroundColor: 'rgba(0,0,0,0.45)',
+                color: '#fff',
+                fontWeight: 800,
+                fontSize: '12px',
+                padding: '5px 12px',
+                borderRadius: '4px',
+                border: '1px solid rgba(255,255,255,0.2)',
+                textTransform: 'uppercase',
+              }}>
+                STONKFUN.XYZ • USDC PAIR
+              </span>
+            </div>
+
+            <h2 className="fortnite-header" style={{ fontSize: 'clamp(34px, 5vw, 54px)', color: '#fff', lineHeight: 1.05, marginBottom: '14px', textShadow: '0 4px 16px rgba(0,0,0,0.35)' }}>
+              THE SITE IS THE ITEM SHOP.<br />$VBUCKS IS THE CURRENCY.
+            </h2>
+
+            <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.92)', lineHeight: 1.6, fontWeight: 500, marginBottom: '22px' }}>
+              In Fortnite, the Item Shop is where all the skins, emotes, and bundles drop — and V-Bucks are the money you spend inside it. We brought both on-chain. Hold <strong>$VBUCKS</strong> in your wallet and automatically earn <strong>real USDC rewards</strong> on every single transfer.
             </p>
-            <p style={{ fontSize: '22px', fontWeight: 800, color: '#fff' }}>
-              {item.value}
+
+            {/* Contract Address Box inside Hero */}
+            <div
+              onClick={handleCopy}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '14px',
+                backgroundColor: 'rgba(6, 14, 28, 0.82)',
+                backdropFilter: 'blur(12px)',
+                border: '2px solid #fce000',
+                borderRadius: '12px',
+                padding: '12px 18px',
+                cursor: 'pointer',
+                maxWidth: '100%',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+              }}
+            >
+              <span style={{
+                backgroundColor: '#fce000',
+                color: '#000',
+                fontWeight: 900,
+                fontSize: '12px',
+                padding: '4px 8px',
+                borderRadius: '5px',
+                letterSpacing: '0.5px',
+              }}>
+                CONTRACT
+              </span>
+              <span style={{
+                fontFamily: 'monospace',
+                fontSize: '15px',
+                fontWeight: 700,
+                color: '#fff',
+                wordBreak: 'break-all',
+              }}>
+                {copied ? 'COPIED TO CLIPBOARD!' : CONTRACT_ADDRESS}
+              </span>
+              {copied ? <Check size={18} color="#4eff8c" /> : <Copy size={18} color="#fce000" />}
+            </div>
+          </div>
+
+          {/* Right side characters showcase (hidden on small screens via flex wrap / absolute) */}
+          <div className="mobile-hide" style={{
+            position: 'absolute',
+            right: '24px',
+            bottom: '38px',
+            display: 'flex',
+            alignItems: 'flex-end',
+            pointerEvents: 'none',
+            zIndex: 6,
+          }}>
+            <img
+              src="/images/elon.png"
+              alt="Elon"
+              style={{ height: '330px', objectFit: 'contain', marginRight: '-60px', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.6))' }}
+            />
+            <img
+              src="/images/donnie.png"
+              alt="Donnie"
+              style={{ height: '360px', objectFit: 'contain', filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.7))' }}
+            />
+          </div>
+
+          {/* White Fortnite Bottom Strip */}
+          <div style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: '40px',
+            backgroundColor: 'rgba(255,255,255,0.92)',
+            backdropFilter: 'blur(10px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '0 28px',
+            zIndex: 12,
+          }}>
+            <span style={{ fontSize: '12px', fontWeight: 900, color: '#111', letterSpacing: '0.6px', textTransform: 'uppercase' }}>
+              INCLUDES: 1 BILLION SUPPLY &nbsp;•&nbsp; 1% AUTO USDC HOLDER REWARDS &nbsp;•&nbsp; 85 SOL RAYDIUM GRADUATION
+            </span>
+            <span style={{ fontSize: '12px', fontWeight: 900, color: '#1d4ed8', textTransform: 'uppercase' }}>
+              NO STAKING REQUIRED
+            </span>
+          </div>
+        </div>
+
+        {/* 6 TOKEN STATS — Styled like Fortnite Rarity Item Tiles */}
+        <div style={{ marginBottom: '44px' }}>
+          <h2 className="fortnite-header" style={{ fontSize: '36px', color: '#fff', marginBottom: '16px' }}>
+            ITEM SPECIFICATIONS
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '16px',
+          }}>
+            {rarityStats.map((item, i) => (
+              <div key={i} style={{
+                position: 'relative',
+                borderRadius: '16px',
+                background: item.bg,
+                padding: '24px 22px 48px',
+                border: '2px solid rgba(255,255,255,0.22)',
+                boxShadow: '0 10px 28px rgba(0,0,0,0.35)',
+                overflow: 'hidden',
+              }}>
+                {/* Subtle radial highlight */}
+                <div style={{
+                  position: 'absolute',
+                  top: '-30%',
+                  right: '-20%',
+                  width: '180px',
+                  height: '180px',
+                  borderRadius: '50%',
+                  background: 'radial-gradient(circle, rgba(255,255,255,0.28) 0%, transparent 70%)',
+                  pointerEvents: 'none',
+                }} />
+
+                <span style={{
+                  display: 'inline-block',
+                  backgroundColor: 'rgba(0,0,0,0.45)',
+                  color: '#fff',
+                  fontSize: '10px',
+                  fontWeight: 900,
+                  letterSpacing: '1.2px',
+                  padding: '3px 8px',
+                  borderRadius: '4px',
+                  marginBottom: '12px',
+                }}>
+                  {item.rarity}
+                </span>
+
+                <p className="fortnite-header" style={{ fontSize: '34px', color: '#fff', lineHeight: 1.05, marginBottom: '6px', textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}>
+                  {item.value}
+                </p>
+                <p style={{ fontSize: '14px', fontWeight: 700, color: 'rgba(255,255,255,0.9)' }}>
+                  {item.sub}
+                </p>
+
+                {/* Bottom white rarity strip */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: '32px',
+                  backgroundColor: 'rgba(255,255,255,0.9)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  padding: '0 18px',
+                }}>
+                  <span style={{ fontSize: '11px', fontWeight: 900, color: '#111', letterSpacing: '0.8px' }}>
+                    {item.label}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* LORE & CULTURE — 2 COLUMN GAME CARDS */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+          gap: '20px',
+          marginBottom: '44px',
+        }}>
+          {/* Card 1: Why Item Shop + V-Bucks */}
+          <div style={{
+            borderRadius: '20px',
+            background: 'linear-gradient(160deg, rgba(15, 33, 67, 0.92) 0%, rgba(7, 18, 38, 0.96) 100%)',
+            border: '1px solid rgba(78, 176, 255, 0.3)',
+            padding: '32px',
+            boxShadow: '0 16px 40px rgba(0,0,0,0.4)',
+          }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#fce000', fontWeight: 900, fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '10px' }}>
+              <Zap size={16} /> THE ECOSYSTEM
+            </div>
+            <h3 className="fortnite-header" style={{ fontSize: '32px', color: '#fff', marginBottom: '14px', lineHeight: 1.05 }}>
+              WHY &quot;ITEM SHOP&quot; &amp; &quot;$VBUCKS&quot;?
+            </h3>
+            <p style={{ fontSize: '15.5px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: '14px' }}>
+              Every single gamer knows how Fortnite works: the <strong>Item Shop</strong> is the storefront that rotates iconic characters and bundles at midnight, and <strong>V-Bucks</strong> are the currency required to unlock them.
+            </p>
+            <p style={{ fontSize: '15.5px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7 }}>
+              One doesn&apos;t exist without the other. Our website is the satirical <strong>Item Shop</strong> featuring internet culture&apos;s wildest bundles, and <strong>$VBUCKS</strong> is the native currency powering the entire world.
             </p>
           </div>
-        ))}
-      </div>
 
-      {/* Why Item Shop + VBUCKS */}
-      <div style={cardStyle}>
-        <p style={labelStyle}>THE ITEM SHOP &amp; THE COIN</p>
-        <p style={bodyStyle}>
-          In Fortnite, the Item Shop is where you spend your V-Bucks. This site works the same way. It is the
-          Item Shop, the place where the characters and bundles live, and $VBUCKS is the currency behind it.
-        </p>
-        <p style={{ ...bodyStyle, marginBottom: 0 }}>
-          The shop is the product and V-Bucks are the money. One without the other doesn&apos;t make sense, which
-          is why the website is called the Item Shop and the coin is called VBUCKS.
-        </p>
-      </div>
-
-      {/* What are V-Bucks */}
-      <div style={cardStyle}>
-        <p style={labelStyle}>WHAT ARE V-BUCKS?</p>
-        <p style={bodyStyle}>
-          V-Bucks are the in-game currency of Fortnite. They arrived with the game in 2017 and became the way
-          players buy skins, emotes, gliders, pickaxes and the Battle Pass. Every item in the Item Shop is priced in V-Bucks.
-        </p>
-        <p style={{ ...bodyStyle, marginBottom: 0 }}>
-          Almost every Fortnite player knows what V-Bucks are, and most have spent them.
-        </p>
-      </div>
-
-      {/* Culture */}
-      <div style={cardStyle}>
-        <p style={labelStyle}>THE CULTURE</p>
-        <p style={bodyStyle}>
-          V-Bucks are one of the most recognised currencies in gaming culture. The gift cards, the memes about
-          &quot;free V-Bucks&quot;, and the daily Item Shop refresh at midnight are shared experiences for a whole generation.
-          People talk about skins the way they talk about sneakers and streetwear.
-        </p>
-        <p style={{ ...bodyStyle, marginBottom: 0 }}>
-          This site is built on that culture: the characters, the items and the bundles. $VBUCKS puts the
-          currency behind all of it on-chain.
-        </p>
-      </div>
-
-      {/* Why it deserves to run */}
-      <div style={cardStyle}>
-        <p style={labelStyle}>WHY IT DESERVES TO RUN</p>
-        <p style={bodyStyle}>
-          Real money already flows through V-Bucks at massive scale. Players have spent billions on digital
-          items, with no one expecting a return on them. Those figures are third-party estimates. Epic Games is private
-          and does not publish exact numbers, so treat them as rough.
-        </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '14px', marginTop: '20px' }}>
-          {spendFacts.map((fact, i) => (
-            <div key={i} style={{
-              background: 'rgba(0,0,0,0.3)',
-              borderRadius: '12px',
-              padding: '20px',
-              border: '1px solid rgba(255,255,255,0.06)',
-            }}>
-              <p style={{ fontSize: '28px', fontWeight: 800, color: '#4eb0ff', marginBottom: '6px' }}>{fact.value}</p>
-              <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.5 }}>{fact.text}</p>
+          {/* Card 2: What are V-Bucks & The Culture */}
+          <div style={{
+            borderRadius: '20px',
+            background: 'linear-gradient(160deg, rgba(46, 16, 101, 0.88) 0%, rgba(17, 10, 40, 0.96) 100%)',
+            border: '1px solid rgba(168, 85, 247, 0.35)',
+            padding: '32px',
+            boxShadow: '0 16px 40px rgba(0,0,0,0.4)',
+          }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#c084fc', fontWeight: 900, fontSize: '12px', letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '10px' }}>
+              <Flame size={16} /> THE LORE &amp; CULTURE
             </div>
-          ))}
+            <h3 className="fortnite-header" style={{ fontSize: '32px', color: '#fff', marginBottom: '14px', lineHeight: 1.05 }}>
+              THE MOST ICONIC CURRENCY IN GAMING
+            </h3>
+            <p style={{ fontSize: '15.5px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: '14px' }}>
+              Introduced in 2017, V-Bucks transcended gaming to become pure internet culture. From grocery store gift card racks to viral &quot;19 Dollar Fortnite Card&quot; memes, V-Bucks is a household name for an entire generation.
+            </p>
+            <p style={{ fontSize: '15.5px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7 }}>
+              People flex skins the exact same way they flex Rolexes, sneakers, or blue-chip NFTs. $VBUCKS takes that instant cultural mindshare and turns it into a reward-bearing asset on Solana.
+            </p>
+          </div>
         </div>
-        <p style={{ ...bodyStyle, marginTop: '20px', marginBottom: 0 }}>
-          The idea is simple. A currency that hundreds of millions of people already recognise, with a community
-          that already spends in the Item Shop, has a head start that most new coins never get.
-        </p>
-      </div>
 
-      {/* Why USDC */}
-      <div style={cardStyle}>
-        <p style={labelStyle}>WHY PAIR WITH USDC?</p>
-        <ul style={{ ...bodyStyle, paddingLeft: '20px', marginBottom: 0 }}>
-          <li style={{ marginBottom: '10px' }}>
-            <strong style={{ color: '#fff' }}>Stable rewards.</strong> USDC is pegged to the US dollar, so holders
-            get paid in a stable asset rather than a volatile coin.
-          </li>
-          <li style={{ marginBottom: '10px' }}>
-            <strong style={{ color: '#fff' }}>Matches the theme.</strong> V-Bucks are a currency tied to real
-            dollars (you buy them with cash), so a dollar pair fits the story.
-          </li>
-          <li style={{ marginBottom: '10px' }}>
-            <strong style={{ color: '#fff' }}>Easy to understand.</strong> &quot;Hold the coin, earn USDC&quot; is a
-            one-line pitch.
-          </li>
-          <li>
-            <strong style={{ color: '#fff' }}>Automatic.</strong> The platform sends rewards straight to holders&apos;
-            wallets in the paired token. There is nothing to stake and nothing to claim.
-          </li>
-        </ul>
-      </div>
+        {/* WHY IT DESERVES TO BE A RUNNER — SPENDING FACTS */}
+        <div style={{
+          borderRadius: '22px',
+          background: 'linear-gradient(180deg, rgba(10, 25, 48, 0.92) 0%, rgba(5, 13, 26, 0.96) 100%)',
+          border: '2px solid rgba(252, 224, 0, 0.35)',
+          padding: '36px 32px',
+          marginBottom: '44px',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.45)',
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px', marginBottom: '20px' }}>
+            <div>
+              <span style={{ backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '4px 10px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                BILLION-DOLLAR ECONOMY
+              </span>
+              <h2 className="fortnite-header" style={{ fontSize: 'clamp(30px, 4.5vw, 44px)', color: '#fff', marginTop: '10px', lineHeight: 1 }}>
+                WHY $VBUCKS DESERVES TO BE A RUNNER
+              </h2>
+            </div>
+          </div>
 
-      {/* How rewards work */}
-      <div style={cardStyle}>
-        <p style={labelStyle}>HOW REWARDS WORK</p>
-        <ol style={{ ...bodyStyle, paddingLeft: '20px', marginBottom: 0 }}>
-          {rewardSteps.map((step, i) => (
-            <li key={i} style={{ marginBottom: '10px' }}>{step}</li>
-          ))}
-        </ol>
-        <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, marginTop: '14px', marginBottom: 0 }}>
-          The token launches on a bonding curve with no upfront liquidity, then graduates to a Raydium pool at
-          85 SOL raised. Payout size depends on trading volume, so there is no guaranteed return.
-        </p>
-      </div>
+          <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, maxWidth: '820px', marginBottom: '28px' }}>
+            Most meme coins try to manufacture attention from scratch. <strong>V-Bucks already commands billions of dollars in real-world annual spending.</strong> Gamers have poured over $40 billion into V-Bucks with zero return — now imagine a version on Solana that actually pays you back in USDC for holding.
+          </p>
 
-      {/* Disclaimer */}
-      <div style={{ width: '100%', maxWidth: '800px', padding: '0 8px' }}>
-        <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, textAlign: 'center' }}>
-          $VBUCKS is a community meme coin and is not affiliated with, endorsed by, or connected to Epic Games or
-          Fortnite. Nothing on this page is financial advice. Crypto is risky and you can lose everything you put in.
-          Spending figures are third-party estimates.
-        </p>
-      </div>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '16px',
+          }}>
+            {spendFacts.map((fact, i) => (
+              <div key={i} style={{
+                background: 'rgba(255,255,255,0.04)',
+                borderRadius: '16px',
+                padding: '24px 20px',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderTop: `4px solid ${fact.accent}`,
+              }}>
+                <p className="fortnite-header" style={{ fontSize: '32px', color: fact.accent, marginBottom: '6px', lineHeight: 1 }}>
+                  {fact.value}
+                </p>
+                <p style={{ fontSize: '15px', fontWeight: 800, color: '#fff', marginBottom: '8px' }}>
+                  {fact.title}
+                </p>
+                <p style={{ fontSize: '13.5px', color: 'rgba(255,255,255,0.68)', lineHeight: 1.55 }}>
+                  {fact.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* USDC REWARDS FLYWHEEL SECTION */}
+        <div style={{
+          borderRadius: '22px',
+          background: 'linear-gradient(135deg, #064e3b 0%, #047857 50%, #065f46 100%)',
+          border: '2px solid rgba(255,255,255,0.22)',
+          padding: '36px 32px',
+          marginBottom: '44px',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.45)',
+        }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', backgroundColor: '#fff', color: '#065f46', fontWeight: 900, fontSize: '11px', padding: '4px 10px', borderRadius: '4px', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <DollarSign size={14} strokeWidth={3} /> STONKFUN.XYZ REWARD ENGINE
+          </div>
+          <h2 className="fortnite-header" style={{ fontSize: 'clamp(30px, 4.5vw, 44px)', color: '#fff', lineHeight: 1, marginBottom: '14px' }}>
+            PAIRED WITH USDC — AUTOMATIC HOLDER PAYOUTS
+          </h2>
+          <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.9)', lineHeight: 1.7, maxWidth: '820px', marginBottom: '28px' }}>
+            On StonkFun (powered by Raydium LaunchLab), reward tokens pay holders in the exact quote asset the coin is paired against. By pairing <strong>$VBUCKS</strong> directly with <strong>USDC</strong>, every holder earns real, stable US Dollars automatically.
+          </p>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))',
+            gap: '16px',
+          }}>
+            {[
+              {
+                step: '01',
+                title: '1% Transfer Tax',
+                desc: 'Locked at launch: every transfer contributes 1% into the holder reward pool alongside a 1.25% trading fee.',
+              },
+              {
+                step: '02',
+                title: 'Paid in Real USDC',
+                desc: 'Instead of earning a volatile token that dumps, rewards are distributed in USDC — stable, liquid digital dollars.',
+              },
+              {
+                step: '03',
+                title: '100% Automatic',
+                desc: 'No staking contracts, no lockups, and no sketchy claim websites. Rewards drop straight into your Solana wallet pro-rata.',
+              },
+              {
+                step: '04',
+                title: '85 SOL Raydium Pool',
+                desc: 'Fair bonding-curve launch with zero upfront team allocation. At 85 SOL raised, liquidity automatically graduates to Raydium.',
+              },
+            ].map((item, idx) => (
+              <div key={idx} style={{
+                backgroundColor: 'rgba(0,0,0,0.32)',
+                borderRadius: '14px',
+                padding: '22px 20px',
+                border: '1px solid rgba(255,255,255,0.14)',
+              }}>
+                <span className="fortnite-header" style={{ fontSize: '26px', color: '#6ee7b7', display: 'block', marginBottom: '6px' }}>
+                  STEP {item.step}
+                </span>
+                <h4 style={{ fontSize: '17px', fontWeight: 800, color: '#fff', marginBottom: '8px' }}>
+                  {item.title}
+                </h4>
+                <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.8)', lineHeight: 1.55 }}>
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer Disclaimer */}
+        <div style={{
+          textAlign: 'center',
+          padding: '20px',
+          borderRadius: '14px',
+          backgroundColor: 'rgba(0,0,0,0.28)',
+          border: '1px solid rgba(255,255,255,0.08)',
+        }}>
+          <p style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.5)', lineHeight: 1.6 }}>
+            <ShieldCheck size={14} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '6px', color: '#4eb0ff' }} />
+            <strong>DISCLAIMER:</strong> $VBUCKS is an independent community meme coin on Solana and is not affiliated with, endorsed by, or connected to Epic Games, Inc. or Fortnite. Revenue statistics are based on public industry estimates. Nothing on this site constitutes financial advice.
+          </p>
+        </div>
+      </main>
     </div>
   );
 }
