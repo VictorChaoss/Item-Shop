@@ -128,6 +128,19 @@ export default function TokenomicsPage() {
         ))}
       </div>
 
+      {/* Why Item Shop + VBUCKS */}
+      <div style={cardStyle}>
+        <p style={labelStyle}>THE ITEM SHOP &amp; THE COIN</p>
+        <p style={bodyStyle}>
+          In Fortnite, the Item Shop is where you spend your V-Bucks. This site works the same way. It is the
+          Item Shop, the place where the characters and bundles live, and $VBUCKS is the currency behind it.
+        </p>
+        <p style={{ ...bodyStyle, marginBottom: 0 }}>
+          The shop is the product and V-Bucks are the money. One without the other doesn&apos;t make sense, which
+          is why the website is called the Item Shop and the coin is called VBUCKS.
+        </p>
+      </div>
+
       {/* What are V-Bucks */}
       <div style={cardStyle}>
         <p style={labelStyle}>WHAT ARE V-BUCKS?</p>

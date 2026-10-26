@@ -11,10 +11,10 @@ export default function SocialsPage() {
       url: '#',
     },
     {
-      name: 'X (Twitter)',
+      name: 'X (Twitter) — @STONKVBUCKS',
       description: 'Follow for official updates, announcements, and drops.',
       icon: '𝕏',
-      url: '#',
+      url: 'https://x.com/STONKVBUCKS',
     },
     {
       name: 'X Community',
@@ -65,7 +65,7 @@ export default function SocialsPage() {
         gap: '16px',
       }}>
         {socials.map((social, i) => (
-          <a key={i} href={social.url} style={{
+          <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '20px',
