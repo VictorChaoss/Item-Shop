@@ -202,9 +202,53 @@ export default function SocialsPage() {
                   fontFamily: 'monospace',
                 }}
               >
-                {copied ? 'COPIED CA!' : 'CA: COMING SOON'}
+                {copied ? 'COPIED CA!' : `CA: ${SITE_CONFIG.contractAddress}`}
                 {copied ? <Check size={16} color="#4eff8c" /> : <Copy size={16} color="#4eb0ff" />}
               </button>
+
+              <a
+                href={SITE_CONFIG.stonkfunUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'rgba(16,185,129,0.25)',
+                  color: '#fff',
+                  fontWeight: 900,
+                  fontSize: '13px',
+                  padding: '13px 18px',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(78,255,140,0.45)',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                STONKFUN <ArrowUpRight size={16} strokeWidth={3} />
+              </a>
+
+              <a
+                href={SITE_CONFIG.dexScreenerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'rgba(15,23,42,0.75)',
+                  color: '#fff',
+                  fontWeight: 900,
+                  fontSize: '13px',
+                  padding: '13px 18px',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(255,255,255,0.3)',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                DEXSCREENER <ArrowUpRight size={16} strokeWidth={3} />
+              </a>
             </div>
           </div>
 

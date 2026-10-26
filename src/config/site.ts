@@ -3,7 +3,7 @@
 // Paste your live Solana Contract Address into LIVE_CA below!
 // ============================================================
 
-const LIVE_CA = 'COMING SOON — LAUNCHING ON STONKFUN.XYZ';
+const LIVE_CA = 'FWfwepSrGFfRCkHX17DE95xufYy1LKsfGxadveep2zgB';
 const IS_LIVE = !LIVE_CA.startsWith('COMING SOON');
 
 export const SITE_CONFIG = {
