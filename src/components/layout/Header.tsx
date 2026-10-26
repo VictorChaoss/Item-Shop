@@ -52,56 +52,23 @@ export default function Header() {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* StonkFun Shield Logo */}
-        <Link href="/" className="epic-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', textDecoration: 'none' }}>
-          <div style={{
-            width: '36px',
-            height: '40px',
-            backgroundColor: '#ffffff',
-            clipPath: 'polygon(50% 100%, 100% 82%, 100% 0, 0 0, 0 82%)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            paddingBottom: '4px',
-          }}>
-            <span style={{
-              color: '#000',
-              fontFamily: 'Impact, Arial Black, sans-serif',
-              fontWeight: 900,
-              fontSize: '8.5px',
-              lineHeight: '0.95',
-              letterSpacing: '0.2px',
-              textAlign: 'center',
-            }}>
-              STONK<br/>FUN
-            </span>
-          </div>
-          <ChevronDown style={{ width: '14px', height: '14px', color: 'rgba(255,255,255,0.4)' }} />
+        {/* Official V-Bucks Logo */}
+        <Link href="/" className="epic-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', textDecoration: 'none' }}>
+          <img
+            src="/images/vbucks_logo.png"
+            alt="$VBUCKS"
+            style={{ width: '40px', height: '40px', objectFit: 'contain', filter: 'drop-shadow(0 2px 8px rgba(78,176,255,0.4))' }}
+          />
+          <span className="fortnite-header" style={{ color: '#ffffff', fontSize: '24px', letterSpacing: '0.8px', lineHeight: 1 }}>
+            $VBUCKS
+          </span>
         </Link>
 
         {/* Divider */}
-        <div style={{ width: '1px', height: '28px', backgroundColor: 'rgba(255,255,255,0.1)', marginLeft: '22px', marginRight: '22px' }}></div>
-
-        {/* V-Bucks V Logo */}
-        <Link href="/" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
-          <div style={{
-            width: '32px',
-            height: '32px',
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #4eb0ff 0%, #3047d9 100%)',
-            border: '2px solid #ffffff',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 0 12px rgba(78,176,255,0.45)',
-          }}>
-            <span className="fortnite-header" style={{ color: '#ffffff', fontSize: '19px', fontWeight: 900, lineHeight: 1 }}>V</span>
-          </div>
-        </Link>
+        <div style={{ width: '1px', height: '28px', backgroundColor: 'rgba(255,255,255,0.1)', marginLeft: '20px', marginRight: '8px' }}></div>
 
         {/* Nav Links */}
-        <nav className="header-nav" style={{ display: 'flex', alignItems: 'center', marginLeft: '32px', gap: '6px', height: '100%' }}>
+        <nav className="header-nav" style={{ display: 'flex', alignItems: 'center', marginLeft: '16px', gap: '6px', height: '100%' }}>
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -137,7 +104,7 @@ export default function Header() {
             background: 'linear-gradient(135deg, rgba(78,176,255,0.14) 0%, rgba(48,71,217,0.18) 100%)',
             height: '42px',
             borderRadius: '10px',
-            paddingLeft: '12px',
+            paddingLeft: '10px',
             paddingRight: '14px',
             border: '1px solid rgba(78,176,255,0.35)',
             cursor: 'pointer',
@@ -145,20 +112,11 @@ export default function Header() {
             transition: 'all 0.2s ease',
           }}
         >
-          {/* V-Buck mini icon */}
-          <div style={{
-            width: '22px',
-            height: '22px',
-            borderRadius: '50%',
-            background: 'linear-gradient(135deg, #4eb0ff 0%, #3047d9 100%)',
-            border: '1.5px solid #ffffff',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexShrink: 0,
-          }}>
-            <span style={{ color: '#ffffff', fontSize: '11px', fontWeight: 900, lineHeight: 1 }}>V</span>
-          </div>
+          <img
+            src="/images/vbucks_logo.png"
+            alt="V-Bucks"
+            style={{ width: '26px', height: '26px', objectFit: 'contain', flexShrink: 0 }}
+          />
 
           <span style={{
             backgroundColor: '#fce000',
@@ -196,8 +154,8 @@ export default function Header() {
         {/* Buy V-Bucks */}
         <Link href="/tokenomics" className="mobile-hide" style={{
           height: '42px',
-          paddingLeft: '16px',
-          paddingRight: '22px',
+          paddingLeft: '14px',
+          paddingRight: '20px',
           borderRadius: '6px',
           background: 'linear-gradient(90deg, #44227f 0%, #2f47d9 100%)',
           border: 'none',
@@ -207,26 +165,19 @@ export default function Header() {
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
-          gap: '10px',
+          gap: '8px',
           whiteSpace: 'nowrap',
           textDecoration: 'none',
         }}>
-          <div style={{
-            width: '26px',
-            height: '26px',
-            borderRadius: '50%',
-            backgroundColor: '#ffffff',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexShrink: 0,
-          }}>
-            <span style={{ color: '#3047d9', fontSize: '14px', fontWeight: 900, lineHeight: 1 }}>V</span>
-          </div>
+          <img
+            src="/images/vbucks_logo.png"
+            alt="V-Bucks"
+            style={{ width: '28px', height: '28px', objectFit: 'contain', flexShrink: 0 }}
+          />
           Buy $VBUCKS
         </Link>
 
-        {/* Get Fortnite */}
+        {/* Join X */}
         <a href="https://x.com/STONKVBUCKS" target="_blank" rel="noopener noreferrer" className="mobile-hide" style={{
           height: '42px',
           paddingLeft: '22px',

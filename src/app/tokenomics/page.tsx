@@ -216,10 +216,10 @@ export default function TokenomicsPage() {
             </div>
           </div>
 
-          {/* Right side V-Bucks Coin Emblem */}
+          {/* Right side Official V-Bucks Coin Logo */}
           <div className="mobile-hide" style={{
             position: 'absolute',
-            right: '54px',
+            right: '48px',
             top: '50%',
             transform: 'translateY(-58%)',
             display: 'flex',
@@ -228,38 +228,17 @@ export default function TokenomicsPage() {
             pointerEvents: 'none',
             zIndex: 6,
           }}>
-            <div style={{
-              width: '210px',
-              height: '210px',
-              borderRadius: '50%',
-              background: 'radial-gradient(circle at 30% 30%, #ffffff 0%, #dbeafe 25%, #3b82f6 70%, #1e3a8a 100%)',
-              border: '8px solid rgba(255,255,255,0.9)',
-              boxShadow: '0 20px 50px rgba(0,0,0,0.55), 0 0 60px rgba(78,176,255,0.6), inset 0 -8px 20px rgba(30,58,138,0.6)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transform: 'rotate(-8deg)',
-            }}>
-              <div style={{
-                width: '164px',
-                height: '164px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #1d4ed8 0%, #0f172a 100%)',
-                border: '3px solid rgba(255,255,255,0.35)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <span className="fortnite-header" style={{
-                  fontSize: '112px',
-                  color: '#ffffff',
-                  lineHeight: 1,
-                  textShadow: '0 6px 18px rgba(78,176,255,0.6)',
-                }}>
-                  V
-                </span>
-              </div>
-            </div>
+            <img
+              src="/images/vbucks_logo.png"
+              alt="$VBUCKS Logo"
+              style={{
+                width: '240px',
+                height: '240px',
+                objectFit: 'contain',
+                transform: 'rotate(-6deg)',
+                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(78,176,255,0.45))',
+              }}
+            />
           </div>
 
           {/* White Fortnite Bottom Strip */}
@@ -557,7 +536,7 @@ export default function TokenomicsPage() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '20px',
           }}>
-            {/* Feature 1: 3,000 Generative NFTs */}
+            {/* Feature 1: 3,000 Generative NFTs (Season 1) */}
             <div style={{
               backgroundColor: 'rgba(0,0,0,0.38)',
               borderRadius: '18px',
@@ -567,7 +546,7 @@ export default function TokenomicsPage() {
             }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' }}>
                 <span style={{ backgroundColor: 'rgba(252,224,0,0.18)', color: '#fce000', fontSize: '11px', fontWeight: 900, padding: '4px 10px', borderRadius: '4px', letterSpacing: '1px' }}>
-                  3,000 UNIQUE PIECES
+                  GENESIS DROP • 3,000 PIECES
                 </span>
                 <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '11px', fontWeight: 800, letterSpacing: '0.8px' }}>
                   SOLANA METAPLEX
@@ -575,11 +554,11 @@ export default function TokenomicsPage() {
               </div>
 
               <h3 className="fortnite-header" style={{ fontSize: '28px', color: '#fff', marginBottom: '10px', lineHeight: 1.05 }}>
-                THE ITEM SHOP NFT COLLECTION
+                THE GENESIS ITEM SHOP COLLECTION
               </h3>
 
               <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.65, marginBottom: '14px' }}>
-                A 3,000-piece generative collection built directly from the Item Shop roster — combining <strong>19 iconic characters</strong>, <strong>32 satirical dual-wielded items</strong>, and <strong>6 classic Fortnite rarity sunburst backgrounds</strong> (Common Grey, Uncommon Green, Rare Blue, Epic Purple, Legendary Gold, and Mythic Red).
+                Our first 3,000-piece generative collection built from the Season 1 Item Shop roster — combining <strong>19 iconic characters</strong>, <strong>32 satirical dual-wielded items</strong>, and <strong>6 classic Fortnite rarity sunburst backgrounds</strong> (Common Grey through Mythic Red).
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
@@ -591,7 +570,41 @@ export default function TokenomicsPage() {
               </div>
             </div>
 
-            {/* Feature 2: Custom PFP Maker */}
+            {/* Feature 2: Fresh NFT Collection Every Item Shop Drop */}
+            <div style={{
+              backgroundColor: 'rgba(0,0,0,0.38)',
+              borderRadius: '18px',
+              padding: '28px 24px',
+              border: '1px solid rgba(255,255,255,0.18)',
+              borderTop: '4px solid #34d399',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ backgroundColor: 'rgba(52,211,153,0.2)', color: '#34d399', fontSize: '11px', fontWeight: 900, padding: '4px 10px', borderRadius: '4px', letterSpacing: '1px' }}>
+                  ROTATING SHOP DROPS
+                </span>
+                <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '11px', fontWeight: 800, letterSpacing: '0.8px' }}>
+                  NEW SEASONS
+                </span>
+              </div>
+
+              <h3 className="fortnite-header" style={{ fontSize: '28px', color: '#fff', marginBottom: '10px', lineHeight: 1.05 }}>
+                EVERY SHOP DROP = A FRESH NFT SET
+              </h3>
+
+              <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.65, marginBottom: '14px' }}>
+                Just like the real Fortnite Item Shop rotates new skins and bundles into the store, <strong>every major Item Shop update on our site will launch with its own fresh, limited-edition NFT collection</strong> featuring the newest characters, viral moments, and items.
+              </p>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {['New Shop Rotations', 'Fresh Character Roster', 'Limited Season Sets', 'Vaulted Old Drops'].map((pill, idx) => (
+                  <span key={idx} style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '11.5px', fontWeight: 700, padding: '5px 10px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Feature 3: Custom PFP Maker */}
             <div style={{
               backgroundColor: 'rgba(0,0,0,0.38)',
               borderRadius: '18px',

@@ -163,14 +163,7 @@ export default function Home() {
             <div>
               <h1 className="fortnite-header" style={{ fontSize: '72px', color: '#ffffff', lineHeight: 1, marginBottom: '8px' }}>ITEM SHOP</h1>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontWeight: 700, fontSize: '13.5px', marginTop: '10px' }}>
-                <div style={{
-                  width: '22px', height: '22px', background: 'linear-gradient(135deg, #4eb0ff 0%, #3047d9 100%)', borderRadius: '50%',
-                  border: '1.5px solid #fff',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: '#fff', fontSize: '12px', fontWeight: 900, lineHeight: 1,
-                }}>
-                  V
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                 <span>Powered by <strong>$VBUCKS</strong> on <strong>StonkFun.xyz</strong> &nbsp;•&nbsp; 1% Automatic USDC Holder Rewards</span>
               </div>
             </div>
@@ -234,12 +227,7 @@ export default function Home() {
                 }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>I CANT BREATHE Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{
-                    width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}>
-                    <span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span>
-                  </div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>3,400</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>6,800</span>
                 </div>
@@ -314,9 +302,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Fried Chicken & Kool Aid</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -332,9 +318,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Fentanyl</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -350,9 +334,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Protest Pickaxe</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -426,12 +408,7 @@ export default function Home() {
                 }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>The Offenders Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{
-                    width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  }}>
-                    <span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span>
-                  </div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>4,200</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>8,400</span>
                 </div>
@@ -501,9 +478,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Two State Solution</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -520,9 +495,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Talking Point</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -539,9 +512,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Ceasefire Report</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -574,7 +545,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>The Serial Rugger Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>2,800</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>4,200</span>
                 </div>
@@ -636,9 +607,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Exit Liquidity</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -655,9 +624,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Black Bull GT</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -674,9 +641,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>10x With Cheese</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -705,7 +670,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px' }}>The Epstein Files Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>2,000</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>4,000</span>
                 </div>
@@ -755,9 +720,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Map of Little Saint James</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -774,9 +737,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>The Classified Files</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -793,9 +754,7 @@ export default function Home() {
               <span style={{ position: 'absolute', top: '14px', left: '14px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', zIndex: 5 }}>NEW!</span>
               <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px', position: 'relative', zIndex: 5 }}>Lolita Express</h3>
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', position: 'relative', zIndex: 5 }}>
-                <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span>
-                </div>
+                <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                 <span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span>
               </div>
             </div>
@@ -822,7 +781,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '28px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>All the homies with the Extra Chromeys</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>4,200</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>6,000</span>
                 </div>
@@ -865,7 +824,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Chrome Bag</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
             
@@ -875,7 +834,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Vape Axe</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
 
@@ -885,7 +844,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Curry Potion</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
               </div>
             </div>
           </div>
@@ -911,7 +870,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>The TOP G Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>4,500</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>6,500</span>
                 </div>
@@ -947,7 +906,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Bugatti</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
               </div>
             </div>
             
@@ -957,7 +916,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Johnny Walker & Cigar</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
               </div>
             </div>
 
@@ -967,7 +926,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Red Pill</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>200</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>200</span></div>
               </div>
             </div>
 
@@ -977,7 +936,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Sparkling Water</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
           </div>
@@ -1003,7 +962,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>The Max Win Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>5,000</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>8,000</span>
                 </div>
@@ -1039,7 +998,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>IOU</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
               </div>
             </div>
             
@@ -1049,7 +1008,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Lucky Pickaxe</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
 
@@ -1059,7 +1018,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>The Juice</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
               </div>
             </div>
 
@@ -1069,7 +1028,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>The Last Bet</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>2,000</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>2,000</span></div>
               </div>
             </div>
           </div>
@@ -1095,7 +1054,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>The Wolf Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>4,000</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>6,000</span>
                 </div>
@@ -1131,7 +1090,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Aerotyne Penny Sheet</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
               </div>
             </div>
             
@@ -1141,7 +1100,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Countach</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
               </div>
             </div>
 
@@ -1151,7 +1110,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Quaaludes</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
           </div>
@@ -1177,7 +1136,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>The Mars Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>3,500</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>5,500</span>
                 </div>
@@ -1206,7 +1165,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Cybertruck</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>2,000</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>2,000</span></div>
               </div>
             </div>
             
@@ -1216,7 +1175,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Flamethrower</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,500</span></div>
               </div>
             </div>
 
@@ -1226,7 +1185,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>SpaceX Backpack</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
           </div>
@@ -1252,7 +1211,7 @@ export default function Home() {
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '13px', padding: '4px 12px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '10px' }}>NEW!</span>
                 <h3 className="bundle-title" style={{ fontSize: '32px', fontWeight: 800, color: '#fff', marginBottom: '6px', maxWidth: '80%' }}>The Diddy Party Bundle</h3>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <div style={{ width: '24px', height: '24px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '13px', fontWeight: 900 }}>V</span></div>
+                  <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '26px', height: '26px', objectFit: 'contain' }} />
                   <span style={{ fontSize: '26px', fontWeight: 700, color: '#fff' }}>2,500</span>
                   <span style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(255,255,255,0.45)', textDecoration: 'line-through' }}>4,000</span>
                 </div>
@@ -1281,7 +1240,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Baby Oil Backpack</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>1,200</span></div>
               </div>
             </div>
             
@@ -1291,7 +1250,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>NDA</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>800</span></div>
               </div>
             </div>
 
@@ -1301,7 +1260,7 @@ export default function Home() {
               <div style={{ position: 'relative', zIndex: 5 }}>
                 <span style={{ display: 'inline-block', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '2px 8px', borderRadius: '3px', textTransform: 'uppercase', marginBottom: '6px' }}>NEW!</span>
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#fff', marginBottom: '6px' }}>Party Invitation</h3>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><span style={{ color: '#3047d9', fontSize: '11px', fontWeight: 900 }}>V</span></div><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} /><span style={{ fontSize: '18px', fontWeight: 700, color: '#fff' }}>500</span></div>
               </div>
             </div>
           </div>

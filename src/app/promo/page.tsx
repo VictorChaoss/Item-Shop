@@ -247,7 +247,7 @@ export default function PromoGenerator() {
                     <div style={{ position: 'absolute', bottom: '20px', left: '0', width: '100%', textAlign: 'center' }}>
                       <h3 style={{ fontSize: '24px', fontWeight: 800, margin: '0 0 10px 0', textTransform: 'uppercase' }}>{formatItem(item)}</h3>
                       <div style={{ display: 'inline-flex', alignItems: 'center', backgroundColor: '#000', padding: '8px 16px', borderRadius: '20px', gap: '8px' }}>
-                        <div style={{ width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#40d4e6', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '14px' }}>V</div>
+                        <img src="/images/vbucks_logo.png" alt="V-Bucks" style={{ width: '22px', height: '22px', objectFit: 'contain' }} />
                         <span style={{ fontSize: '20px', fontWeight: 'bold' }}>{i < 3 ? '1,500' : '800'}</span>
                       </div>
                     </div>
