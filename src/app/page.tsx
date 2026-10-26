@@ -22,7 +22,23 @@ const SECTION_KEYS = ['blue', 'red', 'green', 'purple', 'teal', 'matrix', 'degen
 export default function Home() {
   const [bgColor, setBgColor] = useState(SECTION_COLORS.blue);
   const [activeSection, setActiveSection] = useState(0);
+  const [countdown, setCountdown] = useState('08:14:22');
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
+
+  useEffect(() => {
+    const updateTimer = () => {
+      const now = new Date();
+      const nextMidnight = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1, 0, 0, 0));
+      const diff = Math.max(0, Math.floor((nextMidnight.getTime() - now.getTime()) / 1000));
+      const hrs = String(Math.floor(diff / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+      const secs = String(diff % 60).padStart(2, '0');
+      setCountdown(`${hrs}:${mins}:${secs}`);
+    };
+    updateTimer();
+    const timerId = setInterval(updateTimer, 1000);
+    return () => clearInterval(timerId);
+  }, []);
 
   useEffect(() => {
     const visibilityMap = new Map<string, number>();
@@ -159,7 +175,7 @@ export default function Home() {
         }}>
           
           {/* Title Row */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '40px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px', marginBottom: '40px' }}>
             <div>
               <h1 className="fortnite-header" style={{ fontSize: '72px', color: '#ffffff', lineHeight: 1, marginBottom: '8px' }}>ITEM SHOP</h1>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontWeight: 700, fontSize: '13.5px', marginTop: '10px' }}>
@@ -167,8 +183,39 @@ export default function Home() {
                 <span>Powered by <strong>$VBUCKS</strong> on <strong>StonkFun.xyz</strong> &nbsp;•&nbsp; 1% Automatic USDC Holder Rewards</span>
               </div>
             </div>
-            
 
+            {/* Live Fortnite Shop Refresh Timer */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '12px',
+              backgroundColor: 'rgba(0,0,0,0.4)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255,255,255,0.16)',
+              borderRadius: '12px',
+              padding: '10px 18px',
+            }}>
+              <span style={{
+                backgroundColor: '#fce000',
+                color: '#000',
+                fontWeight: 900,
+                fontSize: '11px',
+                padding: '3px 8px',
+                borderRadius: '4px',
+                letterSpacing: '0.8px',
+                textTransform: 'uppercase',
+              }}>
+                NEXT ROTATION
+              </span>
+              <span className="fortnite-header" style={{
+                fontSize: '26px',
+                color: '#ffffff',
+                letterSpacing: '1.5px',
+                lineHeight: 1,
+              }}>
+                {countdown}
+              </span>
+            </div>
           </div>
 
           {/* Section Title */}

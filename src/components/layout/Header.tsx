@@ -5,7 +5,9 @@ import { ChevronDown, Download, Copy, Check, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-const CONTRACT_ADDRESS = 'COMING SOON — LAUNCHING ON STONKFUN';
+import { SITE_CONFIG } from '@/config/site';
+
+const CONTRACT_ADDRESS = SITE_CONFIG.contractAddress;
 
 export default function Header() {
   const pathname = usePathname();

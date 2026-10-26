@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { Copy, Check, ShieldCheck, Coins, Flame, Zap, DollarSign, ArrowUpRight } from 'lucide-react';
 import BackgroundEffects from '@/components/effects/BackgroundEffects';
 
-const CONTRACT_ADDRESS = 'COMING SOON — LAUNCHING ON STONKFUN.XYZ';
+import { SITE_CONFIG } from '@/config/site';
+
+const CONTRACT_ADDRESS = SITE_CONFIG.contractAddress;
 
 const rarityStats = [
   {

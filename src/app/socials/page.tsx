@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { ArrowUpRight, Copy, Check, Sparkles, BarChart3, Users, DollarSign } from 'lucide-react';
 import BackgroundEffects from '@/components/effects/BackgroundEffects';
 
-const CONTRACT_ADDRESS = 'COMING SOON — LAUNCHING ON STONKFUN.XYZ';
+import { SITE_CONFIG } from '@/config/site';
+
+const CONTRACT_ADDRESS = SITE_CONFIG.contractAddress;
 
 export default function SocialsPage() {
   const [copied, setCopied] = useState(false);
@@ -18,15 +20,15 @@ export default function SocialsPage() {
   const socials = [
     {
       name: 'OFFICIAL X (TWITTER)',
-      handle: '@STONKVBUCKS',
+      handle: SITE_CONFIG.xHandle,
       rarity: 'MYTHIC',
       tag: 'LIVE NOW',
       tagColor: '#4eff8c',
       description: 'Official announcements, new Item Shop character drops, contract launch alerts, and daily memes.',
       bg: 'linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #4eb0ff 100%)',
       badge: '𝕏',
-      url: 'https://x.com/STONKVBUCKS',
-      cta: 'FOLLOW @STONKVBUCKS',
+      url: SITE_CONFIG.xUrl,
+      cta: `FOLLOW ${SITE_CONFIG.xHandle}`,
     },
     {
       name: 'X COMMUNITY',
@@ -37,7 +39,7 @@ export default function SocialsPage() {
       description: 'Jump in the lobby with the rest of the holders — raids, memes, bundle ideas, and degen talk.',
       bg: 'linear-gradient(135deg, #6d28d9 0%, #8b5cf6 50%, #a855f7 100%)',
       badge: 'USERS',
-      url: 'https://x.com/STONKVBUCKS',
+      url: SITE_CONFIG.xCommunityUrl,
       cta: 'ENTER LOBBY',
     },
     {
@@ -49,7 +51,7 @@ export default function SocialsPage() {
       description: 'Where $VBUCKS launches on the bonding curve paired with USDC and distributes automatic holder rewards.',
       bg: 'linear-gradient(135deg, #047857 0%, #10b981 50%, #34d399 100%)',
       badge: 'USDC',
-      url: 'https://stonkfun.xyz',
+      url: SITE_CONFIG.stonkfunUrl,
       cta: 'OPEN STONKFUN',
     },
     {
@@ -61,7 +63,7 @@ export default function SocialsPage() {
       description: 'Track real-time price action, market cap, 24h volume, and USDC reward velocity once live.',
       bg: 'linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%)',
       badge: 'CHART',
-      url: 'https://dexscreener.com',
+      url: SITE_CONFIG.dexScreenerUrl,
       cta: 'VIEW CHARTS',
     },
   ];
