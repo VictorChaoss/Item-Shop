@@ -153,52 +153,85 @@ export default function Header() {
           )}
         </button>
 
-        {/* Buy V-Bucks */}
-        <Link href="/tokenomics" className="mobile-hide" style={{
-          height: '42px',
-          paddingLeft: '14px',
-          paddingRight: '20px',
-          borderRadius: '6px',
-          background: 'linear-gradient(90deg, #44227f 0%, #2f47d9 100%)',
-          border: 'none',
-          color: '#ffffff',
-          fontSize: '15px',
-          fontWeight: 700,
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          whiteSpace: 'nowrap',
-          textDecoration: 'none',
-        }}>
+        {/* Buy V-Bucks on StonkFun */}
+        <a
+          href={SITE_CONFIG.stonkfunUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-hide"
+          style={{
+            height: '42px',
+            paddingLeft: '14px',
+            paddingRight: '18px',
+            borderRadius: '6px',
+            background: 'linear-gradient(90deg, #44227f 0%, #2f47d9 100%)',
+            border: 'none',
+            color: '#ffffff',
+            fontSize: '14px',
+            fontWeight: 700,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            whiteSpace: 'nowrap',
+            textDecoration: 'none',
+          }}
+        >
           <img
             src="/images/vbucks_logo.png"
             alt="V-Bucks"
-            style={{ width: '28px', height: '28px', objectFit: 'contain', flexShrink: 0 }}
+            style={{ width: '26px', height: '26px', objectFit: 'contain', flexShrink: 0 }}
           />
           Buy $VBUCKS
-        </Link>
+        </a>
+
+        {/* 1-Click DexScreener */}
+        <a
+          href={SITE_CONFIG.dexScreenerUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mobile-hide"
+          style={{
+            height: '42px',
+            paddingLeft: '14px',
+            paddingRight: '14px',
+            borderRadius: '6px',
+            backgroundColor: '#1c1e24',
+            border: '1px solid rgba(255,255,255,0.16)',
+            color: '#ffffff',
+            fontSize: '14px',
+            fontWeight: 700,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            whiteSpace: 'nowrap',
+            textDecoration: 'none',
+          }}
+        >
+          DexScreener
+        </a>
 
         {/* Join X */}
-        <a href="https://x.com/STONKVBUCKS" target="_blank" rel="noopener noreferrer" className="mobile-hide" style={{
+        <a href={SITE_CONFIG.xUrl} target="_blank" rel="noopener noreferrer" className="mobile-hide" style={{
           height: '42px',
-          paddingLeft: '22px',
-          paddingRight: '16px',
+          paddingLeft: '18px',
+          paddingRight: '14px',
           borderRadius: '6px',
           backgroundColor: '#fce000',
           border: 'none',
           color: '#000000',
-          fontSize: '15px',
+          fontSize: '14px',
           fontWeight: 700,
           cursor: 'pointer',
           display: 'flex',
           alignItems: 'center',
-          gap: '8px',
+          gap: '6px',
           whiteSpace: 'nowrap',
           textDecoration: 'none',
         }}>
           Join X
-          <Download style={{ width: '18px', height: '18px', color: '#000000' }} strokeWidth={2.5} />
+          <Download style={{ width: '16px', height: '16px', color: '#000000' }} strokeWidth={2.5} />
         </a>
         
       </div>

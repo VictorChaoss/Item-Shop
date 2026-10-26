@@ -1442,8 +1442,10 @@ export default function Home() {
                 {copiedCA ? <Check size={16} color="#4eff8c" /> : <Copy size={16} color="#4eb0ff" />}
               </button>
 
-              <Link
-                href="/tokenomics"
+              <a
+                href={SITE_CONFIG.stonkfunUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -1458,8 +1460,30 @@ export default function Home() {
                   textTransform: 'uppercase',
                 }}
               >
-                TOKENOMICS
-              </Link>
+                STONKFUN <ArrowUpRight size={16} strokeWidth={2.5} />
+              </a>
+
+              <a
+                href={SITE_CONFIG.dexScreenerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: '#1c1e24',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: '14px',
+                  padding: '13px 20px',
+                  borderRadius: '10px',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                DEXSCREENER <ArrowUpRight size={16} strokeWidth={2.5} />
+              </a>
 
               <a
                 href={SITE_CONFIG.xUrl}
@@ -1612,9 +1636,10 @@ export default function Home() {
             </p>
 
             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link
-                href="/tokenomics"
-                onClick={() => setInspectedItem(null)}
+              <a
+                href={SITE_CONFIG.stonkfunUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -1629,8 +1654,8 @@ export default function Home() {
                   textTransform: 'uppercase',
                 }}
               >
-                GET $VBUCKS
-              </Link>
+                BUY $VBUCKS <ArrowUpRight size={16} strokeWidth={3} />
+              </a>
 
               <a
                 href={`https://x.com/intent/tweet?text=${encodeURIComponent(`Checking out ${inspectedItem.title} in the Item Shop! 🛒\n\nThe site is the Item Shop. $VBUCKS is the currency (1% automatic USDC rewards).\n\n@STONKVBUCKS`)}`}

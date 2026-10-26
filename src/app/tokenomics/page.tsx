@@ -192,6 +192,7 @@ export default function TokenomicsPage() {
                 cursor: 'pointer',
                 maxWidth: '100%',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                marginBottom: '16px',
               }}
             >
               <span style={{
@@ -215,6 +216,53 @@ export default function TokenomicsPage() {
                 {copied ? 'COPIED TO CLIPBOARD!' : CONTRACT_ADDRESS}
               </span>
               {copied ? <Check size={18} color="#4eff8c" /> : <Copy size={18} color="#fce000" />}
+            </div>
+
+            {/* 1-Click Launch Action Buttons */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+              <a
+                href={SITE_CONFIG.stonkfunUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: '#fce000',
+                  color: '#000',
+                  fontWeight: 900,
+                  fontSize: '14px',
+                  padding: '12px 20px',
+                  borderRadius: '10px',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 6px 18px rgba(0,0,0,0.35)',
+                }}
+              >
+                BUY ON STONKFUN <ArrowUpRight size={17} strokeWidth={3} />
+              </a>
+
+              <a
+                href={SITE_CONFIG.dexScreenerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'rgba(0,0,0,0.55)',
+                  color: '#fff',
+                  fontWeight: 800,
+                  fontSize: '14px',
+                  padding: '12px 18px',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(255,255,255,0.28)',
+                  textDecoration: 'none',
+                  textTransform: 'uppercase',
+                }}
+              >
+                DEXSCREENER CHART <ArrowUpRight size={17} strokeWidth={2.5} />
+              </a>
             </div>
           </div>
 
