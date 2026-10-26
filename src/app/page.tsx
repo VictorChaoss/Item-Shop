@@ -10,7 +10,7 @@ import { SITE_CONFIG } from '@/config/site';
 interface InspectedItem {
   title: string;
   price: string;
-  image?: string;
+  images: string[];
   subtitle?: string;
   isBundle?: boolean;
 }
@@ -55,13 +55,13 @@ export default function Home() {
       if (card) {
         const title = card.querySelector('h3')?.textContent?.trim() || 'Item Shop Cosmetic';
         const imgs = card.querySelectorAll('img');
-        const mainImg = imgs[0]?.getAttribute('src') || undefined;
+        const mainImg = imgs[0]?.getAttribute('src');
         const spans = card.querySelectorAll('span');
         const price = spans[spans.length - 1]?.textContent?.trim() || '800';
         setInspectedItem({
           title,
           price,
-          image: mainImg,
+          images: mainImg ? [mainImg] : [],
           subtitle: 'ITEM SHOP COSMETIC • UNLOCK WITH $VBUCKS',
           isBundle: false,
         });
@@ -69,17 +69,24 @@ export default function Home() {
       }
     }
 
-    // Check if user clicked inside a hero bundle banner
-    const heroCard = target.closest('.hero-card') as HTMLElement | null;
+    // Check if user clicked inside a hero bundle banner OR on the characters in front of it
+    const heroCard = (target.closest('.hero-card') ||
+      target.closest('.character-container')?.parentElement?.querySelector('.hero-card')) as HTMLElement | null;
+
     if (heroCard) {
       const wrapper = heroCard.parentElement;
       const title = heroCard.querySelector('.bundle-title')?.textContent?.trim() || 'Featured Bundle';
       const subtitle = heroCard.querySelector('span')?.textContent?.trim() || 'FEATURED ITEM SHOP BUNDLE';
-      const charImg = wrapper?.querySelector('.character-container img')?.getAttribute('src') || undefined;
+      const charImgs = Array.from(wrapper?.querySelectorAll('.character-container img') || [])
+        .map((img) => img.getAttribute('src'))
+        .filter((src): src is string => Boolean(src));
+      const priceEl = heroCard.querySelector('.bundle-title')?.nextElementSibling?.querySelector('span');
+      const bundlePrice = priceEl?.textContent?.trim() || '2,800';
+
       setInspectedItem({
         title,
-        price: '2,800',
-        image: charImg,
+        price: bundlePrice,
+        images: charImgs,
         subtitle,
         isBundle: true,
       });
@@ -1501,7 +1508,7 @@ export default function Home() {
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '520px',
+              maxWidth: inspectedItem.images.length > 1 ? '660px' : '520px',
               borderRadius: '24px',
               background: 'radial-gradient(circle at 50% 25%, #3b82f6 0%, #1d4ed8 48%, #0f172a 100%)',
               border: '2px solid rgba(255,255,255,0.3)',
@@ -1546,27 +1553,38 @@ export default function Home() {
               textTransform: 'uppercase',
               marginBottom: '12px',
             }}>
-              {inspectedItem.isBundle ? 'FEATURED SHOP BUNDLE' : 'ITEM SHOP COSMETIC'}
+              {inspectedItem.isBundle
+                ? `FEATURED SHOP BUNDLE${inspectedItem.images.length > 1 ? ` • ${inspectedItem.images.length} SKINS` : ''}`
+                : 'ITEM SHOP COSMETIC'}
             </span>
 
-            {inspectedItem.image && (
+            {inspectedItem.images.length > 0 && (
               <div style={{
-                height: '240px',
+                height: '250px',
                 display: 'flex',
-                alignItems: 'center',
+                alignItems: 'flex-end',
                 justifyContent: 'center',
                 margin: '8px auto 16px',
               }}>
-                <img
-                  src={inspectedItem.image}
-                  alt={inspectedItem.title}
-                  style={{
-                    maxHeight: '230px',
-                    maxWidth: '90%',
-                    objectFit: 'contain',
-                    filter: 'drop-shadow(0 16px 28px rgba(0,0,0,0.65))',
-                  }}
-                />
+                {inspectedItem.images.map((imgSrc, idx) => {
+                  const total = inspectedItem.images.length;
+                  const isMiddle = total === 3 && idx === 1;
+                  return (
+                    <img
+                      key={idx}
+                      src={imgSrc}
+                      alt={`${inspectedItem.title} ${idx + 1}`}
+                      style={{
+                        height: isMiddle ? '245px' : total > 1 ? '225px' : '235px',
+                        maxWidth: total === 1 ? '90%' : `${Math.floor(100 / total) + 12}%`,
+                        objectFit: 'contain',
+                        marginLeft: idx === 0 ? '0px' : '-28px',
+                        zIndex: isMiddle ? 4 : idx + 1,
+                        filter: 'drop-shadow(0 16px 28px rgba(0,0,0,0.65))',
+                      }}
+                    />
+                  );
+                })}
               </div>
             )}
 
