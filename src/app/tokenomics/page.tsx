@@ -529,6 +529,104 @@ export default function TokenomicsPage() {
           </div>
         </div>
 
+        {/* COMING SOON: 3,000 ITEM SHOP NFTS & CUSTOM PFP MAKER */}
+        <div style={{
+          borderRadius: '22px',
+          background: 'linear-gradient(135deg, #4c1d95 0%, #6d28d9 45%, #1e1b4b 100%)',
+          border: '2px solid rgba(252, 224, 0, 0.45)',
+          padding: '36px 32px',
+          marginBottom: '44px',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', backgroundColor: '#fce000', color: '#000', fontWeight: 900, fontSize: '11px', padding: '4px 12px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '12px' }}>
+            PHASE 2 EXPANSION • COMING SOON
+          </div>
+
+          <h2 className="fortnite-header" style={{ fontSize: 'clamp(30px, 4.5vw, 46px)', color: '#fff', lineHeight: 1.02, marginBottom: '14px' }}>
+            ITEM SHOP NFTS &amp; CUSTOM PFP LOCKER
+          </h2>
+
+          <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.9)', lineHeight: 1.7, maxWidth: '840px', marginBottom: '28px' }}>
+            The Item Shop doesn&apos;t stop at the coin. We are expanding the ecosystem with a full generative NFT collection on Solana and an interactive Locker tool so every holder can rep the shop across X and Telegram.
+          </p>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '20px',
+          }}>
+            {/* Feature 1: 3,000 Generative NFTs */}
+            <div style={{
+              backgroundColor: 'rgba(0,0,0,0.38)',
+              borderRadius: '18px',
+              padding: '28px 24px',
+              border: '1px solid rgba(255,255,255,0.18)',
+              borderTop: '4px solid #fce000',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ backgroundColor: 'rgba(252,224,0,0.18)', color: '#fce000', fontSize: '11px', fontWeight: 900, padding: '4px 10px', borderRadius: '4px', letterSpacing: '1px' }}>
+                  3,000 UNIQUE PIECES
+                </span>
+                <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '11px', fontWeight: 800, letterSpacing: '0.8px' }}>
+                  SOLANA METAPLEX
+                </span>
+              </div>
+
+              <h3 className="fortnite-header" style={{ fontSize: '28px', color: '#fff', marginBottom: '10px', lineHeight: 1.05 }}>
+                THE ITEM SHOP NFT COLLECTION
+              </h3>
+
+              <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.65, marginBottom: '14px' }}>
+                A 3,000-piece generative collection built directly from the Item Shop roster — combining <strong>19 iconic characters</strong>, <strong>32 satirical dual-wielded items</strong>, and <strong>6 classic Fortnite rarity sunburst backgrounds</strong> (Common Grey, Uncommon Green, Rare Blue, Epic Purple, Legendary Gold, and Mythic Red).
+              </p>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {['6 Rarity Tiers', '19 Characters', '32 Shop Items', 'Full On-Chain Metadata'].map((pill, idx) => (
+                  <span key={idx} style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '11.5px', fontWeight: 700, padding: '5px 10px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Feature 2: Custom PFP Maker */}
+            <div style={{
+              backgroundColor: 'rgba(0,0,0,0.38)',
+              borderRadius: '18px',
+              padding: '28px 24px',
+              border: '1px solid rgba(255,255,255,0.18)',
+              borderTop: '4px solid #4eb0ff',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px', flexWrap: 'wrap', gap: '8px' }}>
+                <span style={{ backgroundColor: 'rgba(78,176,255,0.2)', color: '#4eb0ff', fontSize: '11px', fontWeight: 900, padding: '4px 10px', borderRadius: '4px', letterSpacing: '1px' }}>
+                  INTERACTIVE LOCKER
+                </span>
+                <span style={{ color: 'rgba(255,255,255,0.65)', fontSize: '11px', fontWeight: 800, letterSpacing: '0.8px' }}>
+                  COMING TO SITE
+                </span>
+              </div>
+
+              <h3 className="fortnite-header" style={{ fontSize: '28px', color: '#fff', marginBottom: '10px', lineHeight: 1.05 }}>
+                CUSTOM PFP CREATOR FOR HOLDERS
+              </h3>
+
+              <p style={{ fontSize: '14.5px', color: 'rgba(255,255,255,0.85)', lineHeight: 1.65, marginBottom: '14px' }}>
+                Want to build your own custom loadout? Our upcoming <strong>Item Shop PFP Maker</strong> lets any user pick their favorite rarity background, drop in any character skin from the shop, equip two corner items, and export a high-res PFP in one click to raid X with the squad.
+              </p>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {['Pick Rarity Background', 'Choose Any Character', 'Equip 2 Corner Items', '1-Click PFP Export'].map((pill, idx) => (
+                  <span key={idx} style={{ backgroundColor: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '11.5px', fontWeight: 700, padding: '5px 10px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.12)' }}>
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Footer Disclaimer */}
         <div style={{
           textAlign: 'center',

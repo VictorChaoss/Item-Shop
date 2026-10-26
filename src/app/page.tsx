@@ -162,15 +162,16 @@ export default function Home() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '40px' }}>
             <div>
               <h1 className="fortnite-header" style={{ fontSize: '72px', color: '#ffffff', lineHeight: 1, marginBottom: '8px' }}>ITEM SHOP</h1>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'rgba(255,255,255,0.85)', fontWeight: 700, fontSize: '13px', marginTop: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'rgba(255,255,255,0.9)', fontWeight: 700, fontSize: '13.5px', marginTop: '10px' }}>
                 <div style={{
-                  width: '18px', height: '18px', backgroundColor: '#fff', borderRadius: '3px',
+                  width: '22px', height: '22px', background: 'linear-gradient(135deg, #4eb0ff 0%, #3047d9 100%)', borderRadius: '50%',
+                  border: '1.5px solid #fff',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  color: '#000', fontSize: '7px', fontWeight: 900, lineHeight: 1, textAlign: 'center',
+                  color: '#fff', fontSize: '12px', fontWeight: 900, lineHeight: 1,
                 }}>
-                  EPIC<br/>GAMES
+                  V
                 </div>
-                Powered by the Epic Games Store
+                <span>Powered by <strong>$VBUCKS</strong> on <strong>StonkFun.xyz</strong> &nbsp;•&nbsp; 1% Automatic USDC Holder Rewards</span>
               </div>
             </div>
             

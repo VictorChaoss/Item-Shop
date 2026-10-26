@@ -52,10 +52,10 @@ export default function Header() {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Epic Games Shield Logo */}
+        {/* StonkFun Shield Logo */}
         <Link href="/" className="epic-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', textDecoration: 'none' }}>
           <div style={{
-            width: '34px',
+            width: '36px',
             height: '40px',
             backgroundColor: '#ffffff',
             clipPath: 'polygon(50% 100%, 100% 82%, 100% 0, 0 0, 0 82%)',
@@ -63,18 +63,18 @@ export default function Header() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            paddingTop: '3px',
+            paddingBottom: '4px',
           }}>
             <span style={{
               color: '#000',
-              fontFamily: 'Arial Black, sans-serif',
+              fontFamily: 'Impact, Arial Black, sans-serif',
               fontWeight: 900,
-              fontSize: '7.5px',
-              lineHeight: '1',
-              letterSpacing: '-0.3px',
+              fontSize: '8.5px',
+              lineHeight: '0.95',
+              letterSpacing: '0.2px',
               textAlign: 'center',
             }}>
-              EPIC<br/>GAMES
+              STONK<br/>FUN
             </span>
           </div>
           <ChevronDown style={{ width: '14px', height: '14px', color: 'rgba(255,255,255,0.4)' }} />
@@ -83,11 +83,21 @@ export default function Header() {
         {/* Divider */}
         <div style={{ width: '1px', height: '28px', backgroundColor: 'rgba(255,255,255,0.1)', marginLeft: '22px', marginRight: '22px' }}></div>
 
-        {/* Fortnite F Logo */}
-        <Link href="/" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-          <svg viewBox="0 0 30 30" style={{ width: '26px', height: '32px', fill: '#ffffff' }}>
-            <path d="M4 1h22v7H12v4h12v7H12v11H4V1z"/>
-          </svg>
+        {/* V-Bucks V Logo */}
+        <Link href="/" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+          <div style={{
+            width: '32px',
+            height: '32px',
+            borderRadius: '50%',
+            background: 'linear-gradient(135deg, #4eb0ff 0%, #3047d9 100%)',
+            border: '2px solid #ffffff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 0 12px rgba(78,176,255,0.45)',
+          }}>
+            <span className="fortnite-header" style={{ color: '#ffffff', fontSize: '19px', fontWeight: 900, lineHeight: 1 }}>V</span>
+          </div>
         </Link>
 
         {/* Nav Links */}
