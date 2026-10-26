@@ -22,18 +22,24 @@ const SECTION_KEYS = ['blue', 'red', 'green', 'purple', 'teal', 'matrix', 'degen
 export default function Home() {
   const [bgColor, setBgColor] = useState(SECTION_COLORS.blue);
   const [activeSection, setActiveSection] = useState(0);
-  const [countdown, setCountdown] = useState('08:14:22');
+  const [countdown, setCountdown] = useState('6D 04:24:12');
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
     const updateTimer = () => {
       const now = new Date();
-      const nextMidnight = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1, 0, 0, 0));
-      const diff = Math.max(0, Math.floor((nextMidnight.getTime() - now.getTime()) / 1000));
-      const hrs = String(Math.floor(diff / 3600)).padStart(2, '0');
+      // Count down to next Monday 00:00 UTC (weekly shop rotation)
+      const dayOfWeek = now.getUTCDay(); // 0 = Sun, 1 = Mon, ...
+      const daysUntilNextMonday = ((8 - dayOfWeek) % 7) || 7;
+      const nextWeeklyRotation = new Date(
+        Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + daysUntilNextMonday, 0, 0, 0)
+      );
+      const diff = Math.max(0, Math.floor((nextWeeklyRotation.getTime() - now.getTime()) / 1000));
+      const days = Math.floor(diff / 86400);
+      const hrs = String(Math.floor((diff % 86400) / 3600)).padStart(2, '0');
       const mins = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
       const secs = String(diff % 60).padStart(2, '0');
-      setCountdown(`${hrs}:${mins}:${secs}`);
+      setCountdown(`${days}D ${hrs}:${mins}:${secs}`);
     };
     updateTimer();
     const timerId = setInterval(updateTimer, 1000);
@@ -205,7 +211,7 @@ export default function Home() {
                 letterSpacing: '0.8px',
                 textTransform: 'uppercase',
               }}>
-                NEXT ROTATION
+                WEEKLY ROTATION
               </span>
               <span className="fortnite-header" style={{
                 fontSize: '26px',
