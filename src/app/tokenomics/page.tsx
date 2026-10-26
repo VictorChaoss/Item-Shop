@@ -216,30 +216,6 @@ export default function TokenomicsPage() {
             </div>
           </div>
 
-          {/* Right side Official V-Bucks Coin Logo */}
-          <div className="mobile-hide" style={{
-            position: 'absolute',
-            right: '48px',
-            top: '50%',
-            transform: 'translateY(-58%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            pointerEvents: 'none',
-            zIndex: 6,
-          }}>
-            <img
-              src="/images/vbucks_logo.png"
-              alt="$VBUCKS Logo"
-              style={{
-                width: '240px',
-                height: '240px',
-                objectFit: 'contain',
-                transform: 'rotate(-6deg)',
-                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.6)) drop-shadow(0 0 40px rgba(78,176,255,0.45))',
-              }}
-            />
-          </div>
 
           {/* White Fortnite Bottom Strip */}
           <div style={{
